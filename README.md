@@ -4,6 +4,11 @@
 
 # Templates for Grok Bot
 
+<p align="center">
+  <strong><a href="https://cobusgreyling.github.io/grok-bot-templates/">Browse the template catalog →</a></strong><br/>
+  Pick a card. Copy PROFILE. Paste it into Edit Profile. No clone, no Node.
+</p>
+
 [![CI](https://github.com/cobusgreyling/grok-bot-templates/actions/workflows/ci.yml/badge.svg)](https://github.com/cobusgreyling/grok-bot-templates/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![bot ready](https://cobusgreyling.github.io/grok-bot-templates/badge.svg)](https://cobusgreyling.github.io/grok-bot-templates/)
@@ -31,7 +36,7 @@ https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
 
 Setup fetches each Bot's `PROFILE.md`. It does not invent prompts.
 
-→ [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) (copy PROFILE URL per card) · [Quickstart](./QUICKSTART.md) · [What do you want to do?](./docs/jobs.md)
+→ [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) (copy PROFILE per card) · [Quickstart](./QUICKSTART.md) · [What do you want to do?](./docs/jobs.md)
 
 ## Or copy one PROFILE
 

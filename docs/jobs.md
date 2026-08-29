@@ -15,4 +15,4 @@ This is a **pattern library for operating Grok Bots**. It is not a "make me 50 a
 | Route work without a mega-Bot | `router` |
 | Score a contract I wrote | `npx --yes github:cobusgreyling/grok-bot-templates score <id>` |
 
-Full catalog: paste START.md, or the [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) (copy PROFILE URL). Machine API: [agent.md](./agent.md).
+Full catalog: paste START.md, or the [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) (copy PROFILE). Machine API: [agent.md](./agent.md).

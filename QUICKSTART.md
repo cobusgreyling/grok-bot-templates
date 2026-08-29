@@ -17,7 +17,7 @@ https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
 
 ## Option B — one Bot, copy the PROFILE
 
-Browse the [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) and hit **Copy PROFILE URL**, or:
+Browse the [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) and hit **Copy PROFILE**, or:
 
 ```bash
 npx --yes github:cobusgreyling/grok-bot-templates init pr-reviewer --print

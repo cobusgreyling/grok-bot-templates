@@ -20,6 +20,6 @@ jobs:
       - name: Rendered markdown is not dirty
         run: |
           npm run build
-          git add templates skills routines docs/index.html docs/agent.html docs/catalog.json docs/api docs/badge.svg docs/llms.txt START.md catalog/catalog.json
-          git diff --cached --exit-code -- templates skills routines docs/index.html docs/agent.html docs/catalog.json docs/api docs/badge.svg docs/llms.txt START.md catalog/catalog.json \
+          git add templates skills routines docs/index.html docs/agent.html docs/catalog.json docs/api docs/badge.svg docs/llms.txt docs/profiles.json docs/header.jpg START.md catalog/catalog.json
+          git diff --cached --exit-code -- templates skills routines docs/index.html docs/agent.html docs/catalog.json docs/api docs/badge.svg docs/llms.txt docs/profiles.json docs/header.jpg START.md catalog/catalog.json \
             || { echo "Run npm run build and commit generated files"; exit 1; }

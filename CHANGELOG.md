@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Pages catalog: color-coded categories and plugins, Start here strip, job shortcuts, Copy PROFILE (body) plus Copy URL, first-task install steps on every card
+- Colorful header art; `docs/profiles.json` for one-click PROFILE copy
+
 ## 1.1.0 — 2026-08-29
 
 - Installer-first distribution: START.md is the hero path (no Node)

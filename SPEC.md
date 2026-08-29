@@ -72,7 +72,7 @@ See `schema/template.schema.json`. Required:
 - `never` — extra anti-patterns
 - `share_safe: true`
 
-Optional: `soul`, `skills`, `routine`, `handoffs`, `example_first_run`, `official_use_case`, `featured`.
+Optional: `soul`, `skills`, `routine`, `handoffs`, `example_first_run`, `official_use_case`, `featured`, `share_url` (`https://x.ai/bot/<id>` Add-to-Grok link, or set it in `catalog/share-links.json`).
 
 ## Skills
 
@@ -148,11 +148,13 @@ This catalog is designed so every template is already share-safe.
 
 ## Commands
 
+Paste [START.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md) into a Bot named Setup.
+
 ```bash
-npx @cobusgreyling/grokbot list
-npx @cobusgreyling/grokbot init pr-reviewer --print
-npx @cobusgreyling/grokbot score pr-reviewer
-npx @cobusgreyling/grokbot validate
-npx @cobusgreyling/grokbot doctor
-npx @cobusgreyling/grokbot init --team eng --out ./eng-bots
+npx --yes github:cobusgreyling/grok-bot-templates list
+npx --yes github:cobusgreyling/grok-bot-templates init pr-reviewer --print
+npx --yes github:cobusgreyling/grok-bot-templates score pr-reviewer
+npx --yes github:cobusgreyling/grok-bot-templates validate
+npx --yes github:cobusgreyling/grok-bot-templates doctor
+npx --yes github:cobusgreyling/grok-bot-templates init --team eng --out ./eng-bots
 ```

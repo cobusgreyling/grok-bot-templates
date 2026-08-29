@@ -7,7 +7,7 @@ Grok Bot templates exploded the week share-links shipped. Most directories optim
 | Unit of value | Operating contract + score | Copy-paste PROFILE.md | Public share URL | Named role card |
 | Machine schema | Yes (`template.yaml`) | Partial frontmatter | API envelope | Unspecified |
 | Autonomy levels | L0–L3 | Implicit never-send | Varies per author | Varies |
-| CLI | `npx @cobusgreyling/grokbot` | — | — | — |
+| CLI | `npx github:cobusgreyling/grok-bot-templates` | — | — | — |
 | CI | Schema, secrets, score, drift | — | — | — |
 | Teams as DAG | `teams/*.yaml` + kickoff | START.md teams | Some agent-team tags | Packs |
 | Skills / routines | First-class six-field / test_first | Mentioned | `includes: schedule` flags | — |

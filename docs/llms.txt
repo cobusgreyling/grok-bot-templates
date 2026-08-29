@@ -1,0 +1,13 @@
+# grok-bot-templates
+
+> Operating contracts for Grok Bot. Spec, Bot Ready score, teams, skills, routines.
+
+Paste this into a Bot named Setup (no Node required):
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+Catalog JSON: https://cobusgreyling.github.io/grok-bot-templates/catalog.json
+API: https://cobusgreyling.github.io/grok-bot-templates/api/v1/index.json
+Spec: https://github.com/cobusgreyling/grok-bot-templates/blob/main/SPEC.md
+Site: https://cobusgreyling.github.io/grok-bot-templates/
+
+Week one is L1 Draft — review-ready artifacts, no send/post/pay/merge/production.

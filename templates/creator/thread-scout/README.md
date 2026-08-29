@@ -25,9 +25,15 @@ Own studying public high-engagement X threads for craft — hook, beats, proof t
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init thread-scout
-npx @cobusgreyling/grokbot score thread-scout
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/creator/thread-scout/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init thread-scout --print
+npx --yes github:cobusgreyling/grok-bot-templates score thread-scout
+```

@@ -23,3 +23,5 @@ There is no separate linter yet — `npm run ci` is validate + test + doctor + r
 - `skills/`, `routines/`, `teams/`, `patterns/` — first-class contracts
 - `bin/grokbot.mjs` — CLI
 - `SPEC.md` — binding schema in prose
+- `docs/index.html` + `docs/api/v1/` — generated Pages installer and machine API
+- Hero install path is START.md (no Node). Do not advertise unpublished npm as the primary CLI.

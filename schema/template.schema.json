@@ -155,6 +155,10 @@
     },
     "example_first_run": { "type": "string", "minLength": 80 },
     "share_safe": { "type": "boolean" },
+    "share_url": {
+      "type": "string",
+      "pattern": "^https://x\\.ai/bot/[A-Za-z0-9_-]+$"
+    },
     "docs": {
       "type": "array",
       "items": { "type": "string", "minLength": 8 }

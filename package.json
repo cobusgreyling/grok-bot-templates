@@ -1,6 +1,6 @@
 {
   "name": "@cobusgreyling/grokbot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The engineering kit for Grok Bot templates — spec, Bot Ready score, teams, skills, routines, and a catalog you can paste into Grok Bot today.",
   "type": "module",
   "bin": {
@@ -19,6 +19,7 @@
     "START.md",
     "SPEC.md",
     "catalog/catalog.json",
+    "catalog/share-links.json",
     "assets/header.jpg",
     "README.md",
     "LICENSE"

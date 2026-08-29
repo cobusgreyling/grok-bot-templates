@@ -6,6 +6,8 @@ import { resolveRoot, packageRoot } from "../lib/paths.mjs";
 import { loadAll, findTemplate } from "../lib/load.mjs";
 import { validateLoaded } from "../lib/validate.mjs";
 import { scoreTemplate, scoreAll } from "../lib/score.mjs";
+import { badgeSvg, badgeMarkdown, catalogScore } from "../lib/badge.mjs";
+import { START_URL } from "../lib/urls.mjs";
 import { renderProfile, writeTemplateDocs } from "../lib/render.mjs";
 import { writeSkillDocs } from "../lib/render-skill.mjs";
 import { writeRoutineDocs } from "../lib/render-routine.mjs";
@@ -37,6 +39,11 @@ function args(argv) {
 function help() {
   return `grokbot ${VERSION} — engineering kit for Grok Bot templates
 
+Install a team (no Node):
+  1. Create a Bot named Setup
+  2. Paste ${START_URL}
+  3. Tap Eng. Stay at L1.
+
 Usage:
   grokbot list [--category C] [--autonomy L] [--featured] [--json]
   grokbot show <id>
@@ -44,7 +51,7 @@ Usage:
   grokbot init --team <id> [--out DIR]
   grokbot teams [--json]
   grokbot search <query>
-  grokbot score [id|--all]
+  grokbot score [id|--all] [--badge] [--md] [--out FILE]
   grokbot validate [path]
   grokbot doctor
   grokbot start
@@ -52,12 +59,12 @@ Usage:
   grokbot catalog
   grokbot version
 
-Install a bot in Grok Bot:
-  1. npx @cobusgreyling/grokbot init pr-reviewer --print
-  2. Create a Bot → Edit Profile → paste
-  3. Or paste START.md into an installer Bot
+CLI:
+  npx --yes github:cobusgreyling/grok-bot-templates start
+  npx --yes github:cobusgreyling/grok-bot-templates init pr-reviewer --print
 
 Docs: https://github.com/cobusgreyling/grok-bot-templates
+Site: https://cobusgreyling.github.io/grok-bot-templates/
 Grok Bot: https://x.ai/bot  ·  https://docs.x.ai/grok-bot/get-started
 `;
 }
@@ -137,6 +144,8 @@ function cmdShow(a, loaded) {
   console.log(`${t.tagline}\n`);
   console.log(`Autonomy: ${t.autonomy}   Bot Ready: ${s.earned}/${s.max} ${s.grade}`);
   console.log(`Plugins:  ${(t.plugins || []).join(", ") || "none"}`);
+  console.log(`PROFILE:  https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/${t._rel}/PROFILE.md`);
+  if (t.share_url) console.log(`Share:    ${t.share_url}`);
   console.log(`Job:      ${t.job}\n`);
   console.log("Never:");
   for (const n of t.approval_never) console.log(`  - ${n}`);
@@ -275,9 +284,27 @@ function cmdSearch(a, loaded) {
   return 0;
 }
 
+function emitBadge(payload, a) {
+  if (a.flags.md || a.flags.markdown) {
+    console.log(badgeMarkdown(payload));
+    return payload.ready ? 0 : 1;
+  }
+  const svg = badgeSvg(payload);
+  if (a.flags.out) {
+    const dest = path.resolve(a.flags.out);
+    fs.writeFileSync(dest, svg);
+    console.error(`Wrote ${dest}`);
+    return payload.ready ? 0 : 1;
+  }
+  process.stdout.write(svg);
+  return payload.ready ? 0 : 1;
+}
+
 function cmdScore(a, loaded) {
-  if (a.flags.all || a._[1] === "--all") {
+  const wantAll = a.flags.all || a._[1] === "--all" || (a.flags.badge && !a._[1]);
+  if (wantAll) {
     const rows = scoreAll(loaded.templates);
+    if (a.flags.badge) return emitBadge(catalogScore(rows), a);
     if (a.flags.json) {
       console.log(JSON.stringify(rows, null, 2));
       return 0;
@@ -292,7 +319,7 @@ function cmdScore(a, loaded) {
   }
   const id = a._[1];
   if (!id) {
-    console.error("usage: grokbot score <id> | grokbot score --all");
+    console.error("usage: grokbot score <id> | grokbot score --all | grokbot score --badge");
     return 1;
   }
   const t = findTemplate(loaded, id);
@@ -301,6 +328,7 @@ function cmdScore(a, loaded) {
     return 1;
   }
   const s = scoreTemplate(t);
+  if (a.flags.badge) return emitBadge(s, a);
   if (a.flags.json) {
     console.log(JSON.stringify(s, null, 2));
     return 0;
@@ -365,9 +393,7 @@ function cmdStart(loaded) {
     return 1;
   }
   console.log(fs.readFileSync(file, "utf8"));
-  console.log(
-    `\n# paste the raw URL into a new Grok Bot named Setup:\n# https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md`
-  );
+  console.log(`\n# paste the raw URL into a new Grok Bot named Setup:\n# ${START_URL}`);
   return 0;
 }
 
@@ -446,8 +472,9 @@ function cmdNew(a) {
 
 function cmdCatalog(loaded) {
   const payload = {
-    generated_at: new Date().toISOString(),
     version: VERSION,
+    api_version: "v1",
+    start_url: START_URL,
     count: loaded.templates.length,
     items: loaded.templates.map((t) => ({
       id: t.id,
@@ -458,6 +485,8 @@ function cmdCatalog(loaded) {
       plugins: t.plugins,
       featured: !!t.featured,
       path: t._rel,
+      profile_url: `https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/${t._rel}/PROFILE.md`,
+      share_url: t.share_url || null,
       score: scoreTemplate(t).earned,
     })),
     teams: loaded.teams.map((t) => ({ id: t.id, name: t.name, bots: t.bots })),

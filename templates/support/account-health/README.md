@@ -25,9 +25,15 @@ Own a ranked watch list of risk and expansion signals across a named customer po
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init account-health
-npx @cobusgreyling/grokbot score account-health
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/support/account-health/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init account-health --print
+npx --yes github:cobusgreyling/grok-bot-templates score account-health
+```

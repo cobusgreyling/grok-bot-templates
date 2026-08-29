@@ -25,9 +25,15 @@ Own turning one approved source draft into review-ready variants for social, ema
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init content-remix
-npx @cobusgreyling/grokbot score content-remix
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/content-remix/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init content-remix --print
+npx --yes github:cobusgreyling/grok-bot-templates score content-remix
+```

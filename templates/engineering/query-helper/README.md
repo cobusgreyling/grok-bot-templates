@@ -25,9 +25,15 @@ Own explaining and drafting SQL from the schema in this repository. Return revie
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init query-helper
-npx @cobusgreyling/grokbot score query-helper
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/query-helper/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init query-helper --print
+npx --yes github:cobusgreyling/grok-bot-templates score query-helper
+```

@@ -25,9 +25,15 @@ Own a weekly memo of collected revenue, renewals in window, and past-due from fi
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init saas-finance
-npx @cobusgreyling/grokbot score saas-finance
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/finance/saas-finance/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init saas-finance --print
+npx --yes github:cobusgreyling/grok-bot-templates score saas-finance
+```

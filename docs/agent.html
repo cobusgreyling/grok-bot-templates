@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bot contract · grok-bot-templates</title>
+  <meta name="description" content="Paste this into a Grok Bot so it can list, fetch, and install scored templates from this catalog." />
+  <link rel="canonical" href="https://cobusgreyling.github.io/grok-bot-templates/agent.html" />
+  <style>
+    :root { --bg:#1a1c16; --ink:#f4f1ea; --mute:#9aa08c; --line:#3a3d32; --card:#23251d; --accent:#e8e4d9; }
+    body { margin:0; font-family:ui-sans-serif,system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
+    .wrap { max-width:760px; margin:0 auto; padding:40px 20px 80px; }
+    a { color:var(--accent); }
+    pre { background:#111; border:1px solid var(--line); border-radius:10px; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; }
+    .copyrow { display:flex; gap:8px; align-items:center; margin:12px 0; }
+    button { background:transparent; color:var(--ink); border:1px solid var(--line); border-radius:999px; padding:4px 10px; cursor:pointer; }
+    .mute { color:var(--mute); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="mute"><a href="./">← catalog</a></p>
+    <h1>Point your Grok Bot at this catalog</h1>
+    <p>Paste the contract below into a Bot. It will list scored templates, fetch PROFILE.md, and never invent prompts.</p>
+    <div class="copyrow">
+      <button type="button" id="copy">Copy contract</button>
+      <a href="https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md">START.md (installer)</a>
+    </div>
+    <pre id="contract"># grok-bot-templates — Bot Contract v1
+
+You are a Grok Bot. grok-bot-templates is a scored catalog of operating contracts
+for Grok Bot (job, never-list, L1 default, CI). Public, no auth.
+
+Read FIRST: https://cobusgreyling.github.io/grok-bot-templates/api/v1/status.json
+Scan:       https://cobusgreyling.github.io/grok-bot-templates/api/v1/catalog.json
+Teams:      https://cobusgreyling.github.io/grok-bot-templates/api/v1/teams.json
+Installer:  https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+Rules:
+1. Fetch PROFILE.md from profile_url. Do not invent a prompt.
+2. Week-one autonomy is L1: drafts only. Never send, post, pay, merge, or change production.
+3. Never install a third-party x.ai/bot share URL on the owner's behalf. Show the link.
+4. Report at most 5 templates: name, tagline, score, profile_url, share_url if present.
+5. Rank by featured, then score. Stay in the owner's requested category when they name one.
+6. Shared computer is not a security boundary. Say so if they ask for isolated Bots.
+
+To stand up a team: follow START.md. Create 2–4 Bots from fetched PROFILE.md files.
+</pre>
+    <p class="mute">Raw markdown: <a href="https://github.com/cobusgreyling/grok-bot-templates/blob/main/docs/agent.md">docs/agent.md</a> · JSON: <a href="api/v1/index.json">api/v1</a></p>
+  </div>
+  <script>
+    document.getElementById('copy').addEventListener('click', async (e) => {
+      const t = document.getElementById('contract').innerText;
+      const btn = e.currentTarget;
+      const prev = btn.textContent;
+      try { await navigator.clipboard.writeText(t); btn.textContent = 'Copied'; }
+      catch { window.prompt('Copy', t); }
+      setTimeout(() => { btn.textContent = prev; }, 1200);
+    });
+  </script>
+</body>
+</html>

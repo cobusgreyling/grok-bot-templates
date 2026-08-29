@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Read [SPEC.md](https://github.com/cobusgreyling/grok-bot-templates/blob/main/SPEC.md) first.
-        Fastest path: `npx @cobusgreyling/grokbot new my-job --category ops` then open a PR.
+        Fastest path: `npx --yes github:cobusgreyling/grok-bot-templates new my-job --category ops` then open a PR.
   - type: input
     id: job
     attributes:

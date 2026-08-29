@@ -34,3 +34,9 @@ Never ask an installer Bot to add a random share URL on the owner's behalf. Show
 ## Directory of public share links
 
 [grokbot.dev](https://grokbot.dev) indexes share URLs people posted on X. Useful for discovery. Not a spec. Not validated here.
+
+## This catalog's share URLs
+
+Optional `share_url` on `template.yaml`, or a map in `catalog/share-links.json`. Pages shows **Add to Grok** when the URL is present.
+
+Publish from a clean account: [publish-share-links.md](./publish-share-links.md).

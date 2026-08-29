@@ -25,9 +25,15 @@ Own clustering the same product request that is living in many Slack threads int
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init feature-ask-collator
-npx @cobusgreyling/grokbot score feature-ask-collator
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/product/feature-ask-collator/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init feature-ask-collator --print
+npx --yes github:cobusgreyling/grok-bot-templates score feature-ask-collator
+```

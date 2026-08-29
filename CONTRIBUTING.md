@@ -19,9 +19,9 @@ This repo is a **practical engineering reference** for Grok Bot templates, not a
 ## Fast path
 
 ```bash
-npx @cobusgreyling/grokbot new my-job --category ops
+npx --yes github:cobusgreyling/grok-bot-templates new my-job --category ops
 # edit template.yaml until:
-npx @cobusgreyling/grokbot score my-job   # >= 80
+npx --yes github:cobusgreyling/grok-bot-templates score my-job   # >= 80
 npm run ci
 ```
 

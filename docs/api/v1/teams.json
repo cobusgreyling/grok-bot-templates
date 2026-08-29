@@ -1,0 +1,138 @@
+{
+  "api_version": "v1",
+  "count": 10,
+  "items": [
+    {
+      "id": "eng",
+      "name": "Eng",
+      "lead": "pr-reviewer",
+      "bots": [
+        "bug-reproduction",
+        "issue-drafter",
+        "pr-reviewer"
+      ],
+      "why": "Staging reports stall when repro, the unsent issue, and the risk review live in one undifferentiated chat.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/eng/team.yaml"
+    },
+    {
+      "id": "loop",
+      "name": "Loop",
+      "lead": "evidence-packager",
+      "bots": [
+        "ci-sweeper",
+        "pr-reviewer",
+        "changelog",
+        "evidence-packager"
+      ],
+      "why": "Inner-loop coding agents still need an outer evidence/verdict loop before anyone merges, tags, or writes the ship rationale.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/loop/team.yaml"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "lead": "competitor-watch",
+      "bots": [
+        "competitor-watch",
+        "content-remix",
+        "newsletter-desk"
+      ],
+      "why": "Competitor noise, channel variants, and the weekly issue get mixed until someone diffs, remixes, and still does not publish.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/marketing/team.yaml"
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "lead": "installer",
+      "bots": [
+        "installer",
+        "roster",
+        "router",
+        "foundry"
+      ],
+      "why": "Standing up a catalog team, cutting a bloated fleet, routing work, and minting the next contract are four jobs, not one Setup dump.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/meta/team.yaml"
+    },
+    {
+      "id": "ops",
+      "name": "Ops",
+      "lead": "chief-of-staff",
+      "bots": [
+        "chief-of-staff",
+        "expense-manager",
+        "vendor-inbox"
+      ],
+      "why": "The week hides in Slack, receipts, and vendor mail until someone maps it to priorities without sending a chase.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/ops/team.yaml"
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "lead": "inbox-triage",
+      "bots": [
+        "inbox-triage",
+        "calendar-defender",
+        "subscription-audit"
+      ],
+      "why": "Inbox zero fails when mail, meetings, and unused subs are one Bot that is tempted to send, decline, and unsubscribe.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/personal/team.yaml"
+    },
+    {
+      "id": "product",
+      "name": "Product",
+      "lead": "product-performance",
+      "bots": [
+        "product-performance",
+        "feature-ask-collator",
+        "launch-coordinator"
+      ],
+      "why": "Latency, Slack asks, and launch day collide unless one Bot owns evidence, one clusters asks, and one refuses to publish.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/product/team.yaml"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "lead": "research-desk",
+      "bots": [
+        "research-desk",
+        "cited-brief",
+        "source-interrogator"
+      ],
+      "why": "Deep briefs, three-minute answers, and assumption hunts are different jobs; mixing them hides the not-found list.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/research/team.yaml"
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "lead": "sales-outbound",
+      "bots": [
+        "sales-outbound",
+        "meeting-prep",
+        "call-followup"
+      ],
+      "why": "Outbound volume is useless if the next call is unbriefed and the recap never gets written down before it is sent.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/sales/team.yaml"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "lead": "account-health",
+      "bots": [
+        "account-health",
+        "support-replies",
+        "promise-log"
+      ],
+      "why": "Renewals slip when health is a vibe, replies go out uncited, and promises evaporate after the call.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/success/team.yaml"
+    }
+  ]
+}

@@ -25,9 +25,15 @@ Own flight, stay, and itinerary sanity for a named trip: collisions, gaps, optio
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init travel-desk
-npx @cobusgreyling/grokbot score travel-desk
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/personal/travel-desk/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init travel-desk --print
+npx --yes github:cobusgreyling/grok-bot-templates score travel-desk
+```

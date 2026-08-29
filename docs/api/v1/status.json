@@ -1,0 +1,20 @@
+{
+  "name": "grok-bot-templates",
+  "version": "1.1.0",
+  "api_version": "v1",
+  "schema_revision": "2026-08-29",
+  "start_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md",
+  "catalog_url": "https://cobusgreyling.github.io/grok-bot-templates/catalog.json",
+  "pages_url": "https://cobusgreyling.github.io/grok-bot-templates/",
+  "repo_url": "https://github.com/cobusgreyling/grok-bot-templates",
+  "capabilities": [
+    "list",
+    "teams",
+    "profiles",
+    "score",
+    "start"
+  ],
+  "install": "Create a Bot named Setup. Paste START.md. Tap a team. Stay at L1.",
+  "notices": [],
+  "deprecations": []
+}

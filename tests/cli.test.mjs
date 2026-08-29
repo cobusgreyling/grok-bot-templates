@@ -48,3 +48,33 @@ test("score pr-reviewer ready", () => {
   assert.equal(r.status, 0);
   assert.match(r.stdout, /READY/);
 });
+
+test("help leads with START.md paste", () => {
+  const r = run(["help"]);
+  assert.equal(r.status, 0);
+  assert.match(r.stdout, /START\.md/);
+  assert.match(r.stdout, /Create a Bot named Setup/);
+});
+
+test("score --badge emits svg", () => {
+  const r = run(["score", "pr-reviewer", "--badge"]);
+  assert.equal(r.status, 0);
+  assert.match(r.stdout, /<svg /);
+  assert.match(r.stdout, /bot ready/);
+  assert.match(r.stdout, /100\/100/);
+});
+
+test("score --badge --md emits shields markdown", () => {
+  const r = run(["score", "--badge", "--md"]);
+  assert.equal(r.status, 0);
+  assert.match(r.stdout, /img\.shields\.io\/badge\/bot%20ready/);
+});
+
+test("catalog json includes start_url", () => {
+  const r = run(["catalog"]);
+  assert.equal(r.status, 0);
+  const j = JSON.parse(r.stdout);
+  assert.match(j.start_url, /START\.md$/);
+  assert.ok(j.count >= 6);
+  assert.ok(j.items.some((t) => t.id === "pr-reviewer" && t.profile_url.includes("PROFILE.md")));
+});

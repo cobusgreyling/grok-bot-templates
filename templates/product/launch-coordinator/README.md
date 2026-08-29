@@ -25,9 +25,15 @@ Own a dated launch as group lead: assign researcher, writer, and reviewer, track
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init launch-coordinator
-npx @cobusgreyling/grokbot score launch-coordinator
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/product/launch-coordinator/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init launch-coordinator --print
+npx --yes github:cobusgreyling/grok-bot-templates score launch-coordinator
+```

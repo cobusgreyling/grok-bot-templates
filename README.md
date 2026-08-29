@@ -6,65 +6,68 @@
 
 [![CI](https://github.com/cobusgreyling/grok-bot-templates/actions/workflows/ci.yml/badge.svg)](https://github.com/cobusgreyling/grok-bot-templates/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](package.json)
+[![bot ready](https://cobusgreyling.github.io/grok-bot-templates/badge.svg)](https://cobusgreyling.github.io/grok-bot-templates/)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://cobusgreyling.github.io/grok-bot-templates/)
 
 **Stop pasting vibes. Design the Bot. Get a score.**
 
-Operating contracts for [Grok Bot](https://x.ai/bot) — xAI's durable AI teammate — with a spec, a Bot Ready score, teams, skills, routines, and a CLI.
+Operating contracts for [Grok Bot](https://x.ai/bot) — xAI's durable AI teammate. Spec, Bot Ready score, teams, skills, routines. Paste one URL. Tap a team.
 
 Companion in spirit to [loop-engineering](https://github.com/cobusgreyling/loop-engineering) (inner loops) and [outerloop](https://github.com/cobusgreyling/outerloop) (evidence → verdict). This catalog is the **job → boundary → skill → routine → team** kit for Grok Bot.
 
 > Not affiliated with xAI. Grok Bot is a product of xAI / Cursor. Templates here are contracts you paste into **your** account.
 
-## The loop in 60 seconds
+## Install in 60 seconds — no Node
+
+1. In Grok Bot: **New → Create new agent**. Name it **Setup**.
+2. Paste this URL and send:
 
 ```
-Job → Boundary → Skill → Routine → Team
-who   never      how     when      handoff
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
 ```
 
-A Bot is a durable teammate with a name, a job, a conversation, and working context. Official docs: [Get started](https://docs.x.ai/grok-bot/get-started) · [Bots](https://docs.x.ai/grok-bot/bots) · [Use cases](https://docs.x.ai/grok-bot/use-cases).
+3. Tap a team. Try **Eng** (Bug Reproduction + Issue Drafter + PR Reviewer).
+4. Connect the plugins it lists. Stay at **L1** for a week — drafts, not sends.
 
-Week one is **L1 Draft** — review-ready artifacts, no send/post/pay/merge/production. Same discipline as loop-engineering's report-only week.
+Setup fetches each Bot's `PROFILE.md`. It does not invent prompts.
 
-→ [SPEC.md](./SPEC.md) (binding) · [Quickstart](./QUICKSTART.md) · [What do you want to do?](./docs/jobs.md) · [vs alternatives](./docs/vs-alternatives.md) · [Research](./docs/research.md)
+→ [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) (copy PROFILE URL per card) · [Quickstart](./QUICKSTART.md) · [What do you want to do?](./docs/jobs.md)
 
-## Try it now
+## Or copy one PROFILE
+
+Paste the raw `PROFILE.md` into **Bot actions → Edit Profile**. Connect the plugins it names. Send the first task. Do not enable a routine until two runs look right.
+
+| Bot | Why | Raw PROFILE |
+|-----|-----|-------------|
+| [PR Reviewer](templates/engineering/pr-reviewer/) | Review starts at the scary diff | [PROFILE.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/pr-reviewer/PROFILE.md) |
+| [Bug Reproduction](templates/engineering/bug-reproduction/) | Staging repro packs — never production data | [PROFILE.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/bug-reproduction/PROFILE.md) |
+| [Chief of Staff](templates/ops/chief-of-staff/) | Only items that map to the priority list | [PROFILE.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/chief-of-staff/PROFILE.md) |
+| [Inbox Triage](templates/personal/inbox-triage/) | Buckets and drafts — never send | [PROFILE.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/personal/inbox-triage/PROFILE.md) |
+| [Research Desk](templates/research/research-desk/) | Claims, evidence, disagreements, not-found | [PROFILE.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/research/research-desk/PROFILE.md) |
+
+Full catalog: **49 templates · 10 teams · 47 skills · 8 routines**. All stable templates score **100/100** Bot Ready.
+
+## CLI (optional)
 
 ```bash
-npx github:cobusgreyling/grok-bot-templates list
-npx github:cobusgreyling/grok-bot-templates init pr-reviewer --print
-npx github:cobusgreyling/grok-bot-templates score pr-reviewer
-npx github:cobusgreyling/grok-bot-templates init --team eng --out ./eng-bots
+npx --yes github:cobusgreyling/grok-bot-templates list
+npx --yes github:cobusgreyling/grok-bot-templates init pr-reviewer --print
+npx --yes github:cobusgreyling/grok-bot-templates score pr-reviewer --badge
+npx --yes github:cobusgreyling/grok-bot-templates init --team eng --out ./eng-bots
 ```
 
-Or clone:
-
-```bash
-git clone https://github.com/cobusgreyling/grok-bot-templates.git
-cd grok-bot-templates && npm install && npm run ci
-npx grokbot list
-```
-
-Paste the printed profile into **Bot actions → Edit Profile**. Connect the plugins it names. Send the first task. Do not enable a routine until two runs look right.
-
-### Installer Bot (no CLI)
-
-1. Create a Bot named **Setup**
-2. Paste [START.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md)
-3. Tap a team. Setup creates 2–4 Bots from fetched PROFILE.md files — it does not invent prompts
-4. Connect Settings → Plugins. Stay at L1
+`npx @cobusgreyling/grokbot` is the scoped name; it publishes on the next npm release. GitHub npx works today.
 
 ## Choose a door
 
 | Persona | Start |
 |---------|--------|
-| **I have Grok Bot open** | [QUICKSTART](./QUICKSTART.md) or START.md |
-| **I want a team** | `npx grokbot init --team eng` · [teams/](./teams/) |
-| **I want to write a Bot** | `npx grokbot new my-job --category ops` · [authoring](./docs/authoring.md) |
+| **I have Grok Bot open** | Paste [START.md](https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md) |
+| **I want a team** | Tap Eng / Ops / Sales in Setup · [teams/](./teams/) |
+| **I want to write a Bot** | `npx --yes github:cobusgreyling/grok-bot-templates new my-job --category ops` · [authoring](./docs/authoring.md) |
 | **I want to convert one** | [convert/](./convert/) |
 | **I want to share one** | [sanitizer](./templates/meta/sanitizer/) · [sharing](./docs/sharing.md) |
+| **My Bot should read this catalog** | [docs/agent.md](./docs/agent.md) |
 
 ## Autonomy
 
@@ -83,31 +86,36 @@ Paste the printed profile into **Bot actions → Edit Profile**. Connect the plu
 
 **Ready** means ≥ 80. CI fails a stable template under that line.
 
-## Catalog
-
-**49 templates · 10 teams · 47 skills · 8 routines · 12 patterns.** All stable templates score **100/100** Bot Ready.
-
-Generated from `template.yaml`. Browse on [GitHub Pages](https://cobusgreyling.github.io/grok-bot-templates/) or:
-
 ```bash
-npx grokbot list
-npx grokbot list --category engineering --featured
-npx grokbot search "never send"
+npx --yes github:cobusgreyling/grok-bot-templates score --badge --md
+# ![bot ready 100/100](https://img.shields.io/badge/bot%20ready-100%2F100-2e7d32)
 ```
 
-Official-shaped jobs (from xAI use cases) live alongside originals (Foundry, Router, Evidence Packager, Loop team).
+## The loop in 60 seconds
+
+```
+Job → Boundary → Skill → Routine → Team
+who   never      how     when      handoff
+```
+
+A Bot is a durable teammate with a name, a job, a conversation, and working context. Official docs: [Get started](https://docs.x.ai/grok-bot/get-started) · [Bots](https://docs.x.ai/grok-bot/bots) · [Use cases](https://docs.x.ai/grok-bot/use-cases).
+
+Week one is **L1 Draft** — review-ready artifacts, no send/post/pay/merge/production. Same discipline as loop-engineering's report-only week.
+
+→ [SPEC.md](./SPEC.md) (binding) · [vs alternatives](./docs/vs-alternatives.md)
 
 ## CLI essentials
 
 | Command | Purpose |
 |---------|---------|
+| `start` | Print START.md |
 | `list` | Catalog |
 | `show <id>` | One contract |
 | `init <id> --print` | Paste-ready PROFILE |
 | `init --team <id>` | Roster + kickoff |
-| `score` | Bot Ready |
+| `score [--badge]` | Bot Ready, optional SVG / shields.md |
 | `validate` / `doctor` | Schema, secrets, drift |
-| `start` | Print START.md |
+| `catalog` | JSON for other Bots |
 | `new` | Scaffold a stub |
 
 ## Progressive adoption
@@ -125,11 +133,22 @@ Shared computer. Shared plugins. Share links are public. This catalog is share-s
 
 → [docs/safety.md](./docs/safety.md) · [SECURITY.md](./SECURITY.md)
 
+## Machine API
+
+Public, no auth. Point a Bot at [docs/agent.md](./docs/agent.md).
+
+| URL | Contents |
+|-----|----------|
+| https://cobusgreyling.github.io/grok-bot-templates/api/v1/status.json | version, capabilities |
+| https://cobusgreyling.github.io/grok-bot-templates/catalog.json | full catalog |
+| https://cobusgreyling.github.io/grok-bot-templates/api/v1/teams.json | teams |
+| https://cobusgreyling.github.io/grok-bot-templates/llms.txt | short machine summary |
+
 ## Status
 
-**v1.0.0** — first public catalog.
+**v1.1.0** — installer-first distribution: START.md as the hero path, Pages copy buttons, catalog API, Bot Ready badge.
 
-→ [CHANGELOG.md](./CHANGELOG.md) · [ROADMAP.md](./ROADMAP.md)
+→ [CHANGELOG.md](./CHANGELOG.md) · [ROADMAP.md](./ROADMAP.md) · [Discussions](https://github.com/cobusgreyling/grok-bot-templates/discussions)
 
 ## Development
 
@@ -140,7 +159,7 @@ npm install
 npm run ci
 ```
 
-→ [CONTRIBUTING.md](./CONTRIBUTING.md) · [Code of Conduct](./CODE_OF_CONDUCT.md)
+→ [CONTRIBUTING.md](./CONTRIBUTING.md) · [Good first issues](./docs/good-first-issues.md) · [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 ## Sources
 

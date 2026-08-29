@@ -25,9 +25,15 @@ Own pull-request review for this team's repositories. Turn an open PR into a ris
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init pr-reviewer
-npx @cobusgreyling/grokbot score pr-reviewer
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/pr-reviewer/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init pr-reviewer --print
+npx --yes github:cobusgreyling/grok-bot-templates score pr-reviewer
+```

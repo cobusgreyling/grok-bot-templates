@@ -25,9 +25,15 @@ Own turning a Slack thread, email, or repro pack into an unsent GitHub issue tha
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init issue-drafter
-npx @cobusgreyling/grokbot score issue-drafter
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/issue-drafter/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init issue-drafter --print
+npx --yes github:cobusgreyling/grok-bot-templates score issue-drafter
+```

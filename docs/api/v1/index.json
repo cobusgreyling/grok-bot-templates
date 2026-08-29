@@ -1,0 +1,11 @@
+{
+  "api_version": "v1",
+  "endpoints": {
+    "status": "https://cobusgreyling.github.io/grok-bot-templates/api/v1/status.json",
+    "catalog": "https://cobusgreyling.github.io/grok-bot-templates/api/v1/catalog.json",
+    "teams": "https://cobusgreyling.github.io/grok-bot-templates/api/v1/teams.json",
+    "catalog_alias": "https://cobusgreyling.github.io/grok-bot-templates/catalog.json",
+    "start": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md",
+    "agent": "https://cobusgreyling.github.io/grok-bot-templates/agent.html"
+  }
+}

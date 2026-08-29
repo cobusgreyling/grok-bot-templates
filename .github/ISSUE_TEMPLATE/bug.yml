@@ -13,7 +13,7 @@ body:
     id: cmd
     attributes:
       label: Command
-      placeholder: npx @cobusgreyling/grokbot score pr-reviewer
+      placeholder: npx --yes github:cobusgreyling/grok-bot-templates score pr-reviewer
   - type: textarea
     id: expect
     attributes:

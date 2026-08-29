@@ -25,9 +25,15 @@ Own a mention digest of the named brand, product, and executives from approved S
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init brand-watch
-npx @cobusgreyling/grokbot score brand-watch
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/brand-watch/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init brand-watch --print
+npx --yes github:cobusgreyling/grok-bot-templates score brand-watch
+```

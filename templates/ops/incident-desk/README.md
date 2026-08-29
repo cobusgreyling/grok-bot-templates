@@ -25,9 +25,15 @@ Own a source-linked incident timeline from Slack and GitHub so a human can write
 
 ## Install
 
-```bash
-npx @cobusgreyling/grokbot init incident-desk
-npx @cobusgreyling/grokbot score incident-desk
-```
+Paste the raw PROFILE into **Bot actions → Edit Profile**, or send this URL to a Bot named Setup:
 
-Paste the printed profile into **Bot actions → Edit Profile**, or send the raw PROFILE.md URL to an installer Bot (see [START.md](../../START.md)).
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/incident-desk/PROFILE.md
+
+Installer: https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+
+CLI (optional):
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init incident-desk --print
+npx --yes github:cobusgreyling/grok-bot-templates score incident-desk
+```

@@ -15,9 +15,9 @@ Memory and local files do **not** move. Only the operating contract.
 Always finish with:
 
 ```bash
-npx @cobusgreyling/grokbot new converted-job --category ops
+npx --yes github:cobusgreyling/grok-bot-templates new converted-job --category ops
 # paste the extracted fields into template.yaml
-npx @cobusgreyling/grokbot score converted-job
+npx --yes github:cobusgreyling/grok-bot-templates score converted-job
 ```
 
 Default autonomy **L1**. If the source agent could send mail or push to main, that capability does **not** come across. You add it later as a named L2 action.

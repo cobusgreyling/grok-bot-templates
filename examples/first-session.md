@@ -2,11 +2,19 @@
 
 You installed Grok Bot. You do not want a mega-assistant.
 
-```bash
-npx @cobusgreyling/grokbot init --team eng --out ./eng-bots
+Create a Bot named **Setup**. Paste:
+
+```
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
 ```
 
-Create three Bots from `./eng-bots/*/PROFILE.md`. Group them. Send the kickoff in `TEAM.md`.
+Tap **Eng**. Setup creates Bug Reproduction, Issue Drafter, and PR Reviewer from fetched PROFILE.md files. Put them in one group.
+
+CLI equivalent:
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates init --team eng --out ./eng-bots
+```
 
 **Minute 0–5.** Bug Reproduction gets a staging report. It returns a repro pack or "could not reproduce". Nothing is filed.
 

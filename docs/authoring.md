@@ -1,6 +1,6 @@
 # Authoring a template
 
-1. `npx @cobusgreyling/grokbot new my-job --category ops`
+1. `npx --yes github:cobusgreyling/grok-bot-templates new my-job --category ops`
 2. Replace every stub string in `template.yaml`.
 3. `npm run render && npx grokbot score my-job && npx grokbot validate`
 4. Open a PR. CI re-renders and fails on drift or score < 80.

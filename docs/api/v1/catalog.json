@@ -1,0 +1,1459 @@
+{
+  "generated_from": "1.1.0",
+  "api_version": "v1",
+  "schema_revision": "2026-08-29",
+  "status_url": "https://cobusgreyling.github.io/grok-bot-templates/api/v1/status.json",
+  "count": 49,
+  "start_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md",
+  "items": [
+    {
+      "id": "social-queue",
+      "name": "Social Queue",
+      "title": "One idea into a week of unsent posts",
+      "category": "creator",
+      "autonomy": "L1",
+      "tagline": "Seven drafts from one idea. Nothing hits the network.",
+      "why": "Queue tools that auto-post will ship a half-true hook. This Bot fills the week and waits for a human to publish.\n",
+      "plugins": [
+        "Notion",
+        "X"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/creator/social-queue",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/creator/social-queue/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/creator/social-queue",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "creator",
+        "social",
+        "l1"
+      ]
+    },
+    {
+      "id": "thread-scout",
+      "name": "Thread Scout",
+      "title": "High-engagement thread craft, original drafts",
+      "category": "creator",
+      "autonomy": "L1",
+      "tagline": "Steal the structure. Never steal the post. Never post.",
+      "why": "\"Write a thread like that\" usually means plagiarism. This Bot extracts the machine and writes a new one, still unsent.\n",
+      "plugins": [
+        "X"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/creator/thread-scout",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/creator/thread-scout/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/creator/thread-scout",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "creator",
+        "x",
+        "craft",
+        "l1"
+      ]
+    },
+    {
+      "id": "bug-reproduction",
+      "name": "Bug Reproduction",
+      "title": "Staging reproduction pack writer",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Staging repro packs with evidence — never production customer data.",
+      "why": "Official Grok Bot use case. Comments guess; this Bot is paid to perform the steps in staging and to stop when it cannot reproduce.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/engineering/bug-reproduction",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/bug-reproduction/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/bug-reproduction",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "staging",
+        "bug",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "changelog",
+      "name": "Changelog",
+      "title": "Unreleased notes from merged PRs",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Draft notes from merged PRs — never tag, never publish.",
+      "why": "Friday archaeology invents \"various improvements\". This Bot maps every line to a merged PR and leaves publishing to a human.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/engineering/changelog",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/changelog/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/changelog",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "release",
+        "notes",
+        "l1"
+      ]
+    },
+    {
+      "id": "ci-sweeper",
+      "name": "CI Sweeper",
+      "title": "Report-only CI and flake watcher",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Report failures and flakes — never merge, never hide with reruns.",
+      "why": "Rerun loops launder flakes into green. This Bot exists so a human sees the flake, the new failure, and the hold — not a manufactured pass.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/engineering/ci-sweeper",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/ci-sweeper/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/ci-sweeper",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "ci",
+        "flakes",
+        "l1"
+      ]
+    },
+    {
+      "id": "docs-drift",
+      "name": "Docs Drift",
+      "title": "README and API docs vs code",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Draft the doc diff — never commit, never rewrite code to match.",
+      "why": "Stale READMEs ship the wrong contract to every new hire. This Bot cites both paths and leaves the merge to a human.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/engineering/docs-drift",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/docs-drift/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/docs-drift",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "docs",
+        "drift",
+        "l1"
+      ]
+    },
+    {
+      "id": "issue-drafter",
+      "name": "Issue Drafter",
+      "title": "Unsent GitHub issue writer",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Slack and repro packs become unsent issues — never auto-filed.",
+      "why": "Threads rot. This Bot exists so title, expected, actual, and steps are in the tracker shape before anyone clicks Submit.\n",
+      "plugins": [
+        "GitHub",
+        "Slack"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/engineering/issue-drafter",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/issue-drafter/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/issue-drafter",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "slack",
+        "issues",
+        "l1"
+      ]
+    },
+    {
+      "id": "pr-reviewer",
+      "name": "PR Reviewer",
+      "title": "Risk-first pull request reviewer",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Review starts at the scary diff, not the title.",
+      "why": "Title-first review rubber-stamps. This Bot leads with breakage, missing tests, and description-vs-diff gaps.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/engineering/pr-reviewer",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/pr-reviewer/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/pr-reviewer",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "review",
+        "engineering",
+        "l1"
+      ]
+    },
+    {
+      "id": "query-helper",
+      "name": "Query Helper",
+      "title": "Schema-grounded SQL drafter",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Draft SQL from the schema — never run writes on a live database.",
+      "why": "Chat-invented columns wreck production. This Bot quotes the schema it read and leaves execution of writes to a human.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/engineering/query-helper",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/query-helper/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/query-helper",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "sql",
+        "schema",
+        "l1"
+      ]
+    },
+    {
+      "id": "repo-hardener",
+      "name": "Repo Hardener",
+      "title": "Security and hygiene recommender",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Recommend issues and PRs — never push main, never edit protection.",
+      "why": "Drive-by \"hardening\" that flips protection settings is an outage. This Bot reports what is off and leaves the click to a human.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/engineering/repo-hardener",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/repo-hardener/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/repo-hardener",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "github",
+        "security",
+        "hygiene",
+        "l1"
+      ]
+    },
+    {
+      "id": "saas-finance",
+      "name": "SaaS Finance",
+      "title": "Weekly collected-revenue memo",
+      "category": "finance",
+      "autonomy": "L1",
+      "tagline": "Collected, renewing, past-due — a memo, not a collections bot.",
+      "why": "Weekly SaaS numbers hide in billing mail. This Bot totals what the mail actually shows, compares to last week's memo, and will not dunn a customer or issue a credit to \"make the week look right\".\n",
+      "plugins": [
+        "Gmail"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/finance/saas-finance",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/finance/saas-finance/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/finance/saas-finance",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "finance",
+        "saas",
+        "revenue",
+        "l1"
+      ]
+    },
+    {
+      "id": "security-questionnaire",
+      "name": "Security Questionnaire",
+      "title": "Draft answers from the pack",
+      "category": "legal",
+      "autonomy": "L1",
+      "tagline": "Cited drafts from the pack — the Submit button stays human.",
+      "why": "Questionnaires get answered from memory and then contradict last quarter's pack. This Bot drafts from the pack, lists what the pack does not say, and will not submit.\n",
+      "plugins": [
+        "Google Drive",
+        "Notion"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/legal/security-questionnaire",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/legal/security-questionnaire/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/legal/security-questionnaire",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "legal",
+        "security",
+        "questionnaire",
+        "l1"
+      ]
+    },
+    {
+      "id": "aeo-watch",
+      "name": "AEO Watch",
+      "title": "Answer-engine visibility as a standing program",
+      "category": "marketing",
+      "autonomy": "L1",
+      "tagline": "A query set on a cadence — not \"hey ChatGPT, do we show up\".",
+      "why": "One screenshot of an overview is an anecdote. This Bot reruns the same queries, diffs citations, and writes a brief a search lead can review.\n",
+      "plugins": [],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/marketing/aeo-watch",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/aeo-watch/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/marketing/aeo-watch",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "marketing",
+        "aeo",
+        "l1"
+      ]
+    },
+    {
+      "id": "brand-watch",
+      "name": "Brand Watch",
+      "title": "Mention digest from Slack and X",
+      "category": "marketing",
+      "autonomy": "L1",
+      "tagline": "A reading pile, not a reply thread.",
+      "why": "Brand bots that \"jump in\" create support tickets. This one collates what was said and leaves the reply to a person.\n",
+      "plugins": [
+        "Slack",
+        "X"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/marketing/brand-watch",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/brand-watch/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/marketing/brand-watch",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "marketing",
+        "mentions",
+        "l1"
+      ]
+    },
+    {
+      "id": "competitor-watch",
+      "name": "Competitor Watch",
+      "title": "Material-change competitor watch",
+      "category": "marketing",
+      "autonomy": "L1",
+      "tagline": "Alert only when the page actually changed. Silence is a result.",
+      "why": "Daily competitor recaps train people to ignore them. This Bot diffs against last snapshot and speaks only when the number or the sentence moved.\n",
+      "plugins": [
+        "Slack"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/marketing/competitor-watch",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/competitor-watch/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/marketing/competitor-watch",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "marketing",
+        "competitors",
+        "l1"
+      ]
+    },
+    {
+      "id": "content-remix",
+      "name": "Content Remix",
+      "title": "Draft-only social and email variants",
+      "category": "marketing",
+      "autonomy": "L1",
+      "tagline": "One draft in. A set of variants out. Nothing ships.",
+      "why": "Remixing in the composer produces five slightly different tweets and a live accident. This Bot returns a pack the owner can reject by heading.\n",
+      "plugins": [
+        "Notion"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/marketing/content-remix",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/content-remix/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/marketing/content-remix",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "marketing",
+        "content",
+        "l1"
+      ]
+    },
+    {
+      "id": "newsletter-desk",
+      "name": "Newsletter Desk",
+      "title": "Unsent weekly newsletter from saved links",
+      "category": "marketing",
+      "autonomy": "L1",
+      "tagline": "The issue is written. The send button stays with the owner.",
+      "why": "Newsletter tools want a cadence more than a spine. This Bot collates what was already saved and stops at a reviewable issue.\n",
+      "plugins": [
+        "Gmail",
+        "Google Docs"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/marketing/newsletter-desk",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/newsletter-desk/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/marketing/newsletter-desk",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "marketing",
+        "newsletter",
+        "l1"
+      ]
+    },
+    {
+      "id": "paid-media",
+      "name": "Paid Media",
+      "title": "Spend, CAC, and reallocation drafts",
+      "category": "marketing",
+      "autonomy": "L1",
+      "tagline": "Numbers and a Slack draft. The budget does not move itself.",
+      "why": "Official Grok Bot use case: analysis first, campaign changes behind approval even after the memo becomes a routine.\n",
+      "plugins": [
+        "Slack",
+        "Google Drive"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/marketing/paid-media",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/marketing/paid-media/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/marketing/paid-media",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "marketing",
+        "paid",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "foundry",
+      "name": "Foundry",
+      "title": "Grok Bot template foundry",
+      "category": "meta",
+      "autonomy": "L1",
+      "tagline": "One job in, a shippable Bot recipe out — not a cute persona.",
+      "why": "Most shared Bots fail as General Helper with no boundary. Foundry exists so the next Bot you create is already L1, sourced, and share-safe.\n",
+      "plugins": [],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/meta/foundry",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/meta/foundry/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/meta/foundry",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "meta",
+        "spec",
+        "templates",
+        "l1"
+      ]
+    },
+    {
+      "id": "gardener",
+      "name": "Memory Gardener",
+      "title": "Stale-memory corrector",
+      "category": "meta",
+      "autonomy": "L1",
+      "tagline": "Correct stale memory against a source — do not wipe the role.",
+      "why": "Bots treat chat memory as policy. This one exists so changing facts live in a source system, and the description only holds rules that stay true.\n",
+      "plugins": [],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/meta/gardener",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/meta/gardener/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/meta/gardener",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "meta",
+        "memory",
+        "description",
+        "l1"
+      ]
+    },
+    {
+      "id": "installer",
+      "name": "Setup",
+      "title": "Catalog installer",
+      "category": "meta",
+      "autonomy": "L1",
+      "tagline": "Paste START.md, tap a team, get a roster — not a catalog dump.",
+      "why": "People stall on the first Bot. Setup exists so a team appears with descriptions that already encode L1 boundaries.\n",
+      "plugins": [],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/meta/installer",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/meta/installer/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/meta/installer",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "meta",
+        "install",
+        "start"
+      ]
+    },
+    {
+      "id": "roster",
+      "name": "Roster Coach",
+      "title": "Smallest-useful fleet auditor",
+      "category": "meta",
+      "autonomy": "L1",
+      "tagline": "Cut and merge first — never grow the fleet past the ask.",
+      "why": "Accounts stall at the combined Bot and group cap. This Bot exists so the next move is a cut, not another catch-all teammate.\n",
+      "plugins": [],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/meta/roster",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/meta/roster/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/meta/roster",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "meta",
+        "fleet",
+        "install",
+        "l1"
+      ]
+    },
+    {
+      "id": "router",
+      "name": "Fleet Router",
+      "title": "One-owner work dispatcher",
+      "category": "meta",
+      "autonomy": "L1",
+      "tagline": "Pick one owner, hand off, go silent — never do the work.",
+      "why": "Group chats stall when every Bot answers. This Bot exists so work has one throat to choke and the human sees a single review point.\n",
+      "plugins": [],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/meta/router",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/meta/router/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/meta/router",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "meta",
+        "routing",
+        "group",
+        "l1"
+      ]
+    },
+    {
+      "id": "sanitizer",
+      "name": "Share Sanitizer",
+      "title": "Public-share secret stripper",
+      "category": "meta",
+      "autonomy": "L1",
+      "tagline": "Redact first — the share link must not carry secrets or customers.",
+      "why": "A public share copies identity, description, skills, and routines. It does not copy the computer, but pasted keys and Acme customer names still leak.\n",
+      "plugins": [],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/meta/sanitizer",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/meta/sanitizer/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/meta/sanitizer",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "meta",
+        "share",
+        "privacy",
+        "l1"
+      ]
+    },
+    {
+      "id": "chief-of-staff",
+      "name": "Chief of Staff",
+      "title": "Source-linked daily digest",
+      "category": "ops",
+      "autonomy": "L1",
+      "tagline": "Only items that map to the priority list — with a decision flag.",
+      "why": "Official use case. Untuned CoS bots dump every channel. This one is useful only after the owner marks noise, then it earns a weekday routine.\n",
+      "plugins": [
+        "Slack",
+        "Gmail",
+        "Google Calendar"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/ops/chief-of-staff",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/chief-of-staff/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/ops/chief-of-staff",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "ops",
+        "digest",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "cloud-spend",
+      "name": "Cloud Spend",
+      "title": "Cloud bill notes, not console edits",
+      "category": "ops",
+      "autonomy": "L1",
+      "tagline": "Movers and recommendations — the console stays closed.",
+      "why": "Bill shock shows up in mail first. This Bot writes the note with the invoice as denominator and will not open the cloud console to \"fix\" it.\n",
+      "plugins": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/ops/cloud-spend",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/cloud-spend/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/ops/cloud-spend",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "ops",
+        "cloud",
+        "spend",
+        "l1"
+      ]
+    },
+    {
+      "id": "expense-manager",
+      "name": "Expense Manager",
+      "title": "Weekly expense recon with policy cites",
+      "category": "ops",
+      "autonomy": "L1",
+      "tagline": "Totals that reconcile — exceptions that cite the signed policy.",
+      "why": "Official use case. Untuned expense bots invent categories and send chases. This one reconciles to the source, cites the signed policy, and stops at drafts until a human is happy with the week.\n",
+      "plugins": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/ops/expense-manager",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/expense-manager/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/ops/expense-manager",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "ops",
+        "expenses",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "incident-desk",
+      "name": "Incident Desk",
+      "title": "Slack-and-GitHub incident timeline",
+      "category": "ops",
+      "autonomy": "L1",
+      "tagline": "A timeline a skeptic can audit — not a production console.",
+      "why": "Incident channels go stale in an hour. This Bot turns Slack and GitHub into a chronological write-up a human can accept or reject, and it will not touch prod while it does it.\n",
+      "plugins": [
+        "Slack",
+        "GitHub"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/ops/incident-desk",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/incident-desk/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/ops/incident-desk",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "ops",
+        "incidents",
+        "slack",
+        "github",
+        "l1"
+      ]
+    },
+    {
+      "id": "new-hire-ramp",
+      "name": "New Hire Ramp",
+      "title": "First-week plan with unsent holds",
+      "category": "ops",
+      "autonomy": "L1",
+      "tagline": "A week-one plan a manager can edit — invites stay in draft.",
+      "why": "Ramp docs die as a wall of links. This Bot produces a day-by-day plan with owners and unsent holds so the manager still does the inviting.\n",
+      "plugins": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/ops/new-hire-ramp",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/new-hire-ramp/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/ops/new-hire-ramp",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "ops",
+        "onboarding",
+        "calendar",
+        "l1"
+      ]
+    },
+    {
+      "id": "vendor-inbox",
+      "name": "Vendor Inbox",
+      "title": "Invoice and renewal work list",
+      "category": "ops",
+      "autonomy": "L1",
+      "tagline": "A vendor work list, not a chase bot.",
+      "why": "AP inboxes hide renewals under newsletters. This Bot extracts a list a human can pay from, drafts the missing-info notes, and does not send them.\n",
+      "plugins": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/ops/vendor-inbox",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/ops/vendor-inbox/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/ops/vendor-inbox",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "ops",
+        "vendors",
+        "invoices",
+        "l1"
+      ]
+    },
+    {
+      "id": "calendar-defender",
+      "name": "Calendar Defender",
+      "title": "Deep-work block protector",
+      "category": "personal",
+      "autonomy": "L1",
+      "tagline": "Draft the decline. Never move the meeting yourself.",
+      "why": "A helper that \"just declines\" will drop a customer QBR. This Bot shows the collision and waits.\n",
+      "plugins": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/personal/calendar-defender",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/personal/calendar-defender/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/personal/calendar-defender",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "personal",
+        "calendar",
+        "l1"
+      ]
+    },
+    {
+      "id": "inbox-triage",
+      "name": "Inbox Triage",
+      "title": "Inbox zero without living in Gmail",
+      "category": "personal",
+      "autonomy": "L1",
+      "tagline": "Buckets and drafts — never send, never delete, never unsubscribe.",
+      "why": "Inbox-zero tools that send are a liability. This Bot sorts and drafts so the human still owns every outbound message.\n",
+      "plugins": [
+        "Gmail"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/personal/inbox-triage",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/personal/inbox-triage/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/personal/inbox-triage",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "personal",
+        "gmail",
+        "l1"
+      ]
+    },
+    {
+      "id": "subscription-audit",
+      "name": "Subscription Audit",
+      "title": "Unused-subscription watch from mail",
+      "category": "personal",
+      "autonomy": "L1",
+      "tagline": "Evidence of last use, then a list — you click cancel.",
+      "why": "Auto-unsubscribe bots cancel the wrong vendor. This Bot builds the list and waits for approval, especially in week one.\n",
+      "plugins": [
+        "Gmail"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/personal/subscription-audit",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/personal/subscription-audit/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/personal/subscription-audit",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "personal",
+        "gmail",
+        "subscriptions",
+        "l1"
+      ]
+    },
+    {
+      "id": "travel-desk",
+      "name": "Travel Desk",
+      "title": "Itinerary sanity without booking",
+      "category": "personal",
+      "autonomy": "L1",
+      "tagline": "Sanity-check the trip. Never book. Never pay.",
+      "why": "A travel helper with a card on file is an incident. This Bot compares options and stops at the review pack.\n",
+      "plugins": [
+        "Gmail",
+        "Google Calendar"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/personal/travel-desk",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/personal/travel-desk/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/personal/travel-desk",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "personal",
+        "travel",
+        "l1"
+      ]
+    },
+    {
+      "id": "evidence-packager",
+      "name": "Evidence Packager",
+      "title": "Ship-or-block evidence compiler",
+      "category": "product",
+      "autonomy": "L1",
+      "tagline": "Package what was verified — never issue the ship or block.",
+      "why": "Runs end with a story. This Bot exists so claims without artifact pointers stay unverified, and the human still owns ship or block.\n",
+      "plugins": [
+        "GitHub"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/product/evidence-packager",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/product/evidence-packager/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/product/evidence-packager",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "product",
+        "evidence",
+        "ship",
+        "l1"
+      ]
+    },
+    {
+      "id": "feature-ask-collator",
+      "name": "Feature Ask Collator",
+      "title": "Clustered product asks, not a roadmap",
+      "category": "product",
+      "autonomy": "L1",
+      "tagline": "Quotes and counts. You do not ship the roadmap.",
+      "why": "Slack \"we should\" threads multiply. This Bot clusters the job-to-be-done and stops before anyone files or prioritizes.\n",
+      "plugins": [
+        "Slack"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/product/feature-ask-collator",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/product/feature-ask-collator/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/product/feature-ask-collator",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "product",
+        "slack",
+        "asks",
+        "l1"
+      ]
+    },
+    {
+      "id": "launch-coordinator",
+      "name": "Launch Coordinator",
+      "title": "Go/no-go packet, never the publish",
+      "category": "product",
+      "autonomy": "L1",
+      "tagline": "One owner per role. The human issues the ship verdict.",
+      "why": "Launch chats spawn duplicate posts. This Bot assigns, tracks, and refuses to hit publish.\n",
+      "plugins": [
+        "Slack",
+        "GitHub"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/product/launch-coordinator",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/product/launch-coordinator/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/product/launch-coordinator",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "product",
+        "launch",
+        "l1"
+      ]
+    },
+    {
+      "id": "product-performance",
+      "name": "Product Performance",
+      "title": "Evidence-backed performance investigations",
+      "category": "product",
+      "autonomy": "L1",
+      "tagline": "Hotspot, links, facts vs hypotheses — never touch production.",
+      "why": "Official use case. Latency chats guess. This Bot opens the charts, names the hotspot, and stops before anyone pages or flips a flag.\n",
+      "plugins": [
+        "GitHub",
+        "Slack"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/product/product-performance",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/product/product-performance/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/product/product-performance",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "product",
+        "performance",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "cited-brief",
+      "name": "Cited Brief",
+      "title": "Three-minute cited brief",
+      "category": "research",
+      "autonomy": "L1",
+      "tagline": "One question, three minutes, every claim has a URL.",
+      "why": "Research Desk goes deep. This Bot is the short brief you can read before a meeting without inventing numbers.\n",
+      "plugins": [],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/research/cited-brief",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/research/cited-brief/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/research/cited-brief",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "research",
+        "citations",
+        "brief",
+        "l1"
+      ]
+    },
+    {
+      "id": "research-desk",
+      "name": "Research Desk",
+      "title": "Cited research with a not-found list",
+      "category": "research",
+      "autonomy": "L1",
+      "tagline": "Claims, evidence, disagreements, not-found — then a next read.",
+      "why": "Answer engines average. This Bot is paid to show the fight between sources and to admit gaps.\n",
+      "plugins": [],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/research/research-desk",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/research/research-desk/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/research/research-desk",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "research",
+        "citations",
+        "l1"
+      ]
+    },
+    {
+      "id": "source-interrogator",
+      "name": "Source Interrogator",
+      "title": "Assumption hunter for briefs and memos",
+      "category": "research",
+      "autonomy": "L1",
+      "tagline": "Find the load-bearing claim that never had a source.",
+      "why": "Teams ship on sentences that sound like facts. This Bot is paid to break those sentences before they become a plan.\n",
+      "plugins": [],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/research/source-interrogator",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/research/source-interrogator/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/research/source-interrogator",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "research",
+        "assumptions",
+        "l1"
+      ]
+    },
+    {
+      "id": "call-followup",
+      "name": "Call Follow-up",
+      "title": "Unsent recap and tasks after a call",
+      "category": "sales",
+      "autonomy": "L1",
+      "tagline": "Recap and tasks, still in the building. Sending is a later named L2.",
+      "why": "Official Grok Bot shape: read-and-prepare first. Follow-up mail sent in the moment forgets who promised what. This Bot writes the pack and waits.\n",
+      "plugins": [
+        "Gmail",
+        "Google Calendar"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/sales/call-followup",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/sales/call-followup/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/sales/call-followup",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "sales",
+        "follow-up",
+        "l1"
+      ]
+    },
+    {
+      "id": "meeting-prep",
+      "name": "Meeting Prep",
+      "title": "Pre-call brief from CRM, mail, and calendar",
+      "category": "sales",
+      "autonomy": "L1",
+      "tagline": "Walk in knowing the last promise — the customer already lived the rest.",
+      "why": "Forgotten commitments reopen closed arguments. This Bot rebuilds the thread privately and stops before anyone outside the company sees it.\n",
+      "plugins": [
+        "Gmail",
+        "Google Calendar",
+        "Slack"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/sales/meeting-prep",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/sales/meeting-prep/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/sales/meeting-prep",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "sales",
+        "meetings",
+        "l1"
+      ]
+    },
+    {
+      "id": "sales-outbound",
+      "name": "Outbound",
+      "title": "Account research and review-ready outreach",
+      "category": "sales",
+      "autonomy": "L1",
+      "tagline": "Volume without sounding like a sequence tool — and without sending.",
+      "why": "Official Grok Bot use case: research and drafts first, nightly routine only after the review list is reliable. Sending is a later, named L2.\n",
+      "plugins": [
+        "Gmail",
+        "LinkedIn"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/sales/sales-outbound",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/sales/sales-outbound/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/sales/sales-outbound",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "sales",
+        "outbound",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "talent-scout",
+      "name": "Talent Scout",
+      "title": "Candidate sourcing and unsent outreach",
+      "category": "sales",
+      "autonomy": "L1",
+      "tagline": "Twenty names with evidence. Outreach stays in the draft folder.",
+      "why": "Official Grok Bot use case: research and drafts first. Contacting anyone is a later, named L2 after privacy and source terms are checked.\n",
+      "plugins": [
+        "Gmail",
+        "Google Calendar",
+        "LinkedIn"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/sales/talent-scout",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/sales/talent-scout/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/sales/talent-scout",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "sales",
+        "talent",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "win-loss",
+      "name": "Win Loss",
+      "title": "Win/loss memos from notes and CRM",
+      "category": "sales",
+      "autonomy": "L1",
+      "tagline": "Pattern with evidence. Not \"they just weren't ready\".",
+      "why": "Closed-lost reasons rot into adjectives. This Bot writes a memo other reps can act on and leaves the lost account alone.\n",
+      "plugins": [
+        "Slack",
+        "Notion"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/sales/win-loss",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/sales/win-loss/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/sales/win-loss",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "sales",
+        "win-loss",
+        "l1"
+      ]
+    },
+    {
+      "id": "account-health",
+      "name": "Account Health",
+      "title": "Ranked portfolio watch list",
+      "category": "support",
+      "autonomy": "L1",
+      "tagline": "Evidence-ranked watch list — no customer mail, no CRM edits.",
+      "why": "Official use case. Untuned health bots email customers and write vibes into the CRM. This one ranks against saved thresholds and stops at a list a human can act on.\n",
+      "plugins": [
+        "Slack",
+        "Gmail"
+      ],
+      "featured": true,
+      "official_use_case": true,
+      "path": "templates/support/account-health",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/support/account-health/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/support/account-health",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "support",
+        "accounts",
+        "official",
+        "l1"
+      ]
+    },
+    {
+      "id": "promise-log",
+      "name": "Promise Log",
+      "title": "Customer commitments, written down",
+      "category": "support",
+      "autonomy": "L1",
+      "tagline": "Quotes and dates — not a customer recap email.",
+      "why": "Commitments vanish between the call and the next QBR. This Bot appends them to a workspace log with a quote, and it will not mail the customer a recap that creates still more promises.\n",
+      "plugins": [
+        "Slack",
+        "Google Drive"
+      ],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/support/promise-log",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/support/promise-log/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/support/promise-log",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "support",
+        "promises",
+        "log",
+        "l1"
+      ]
+    },
+    {
+      "id": "support-replies",
+      "name": "Support Replies",
+      "title": "Policy-cited first-response drafts",
+      "category": "support",
+      "autonomy": "L1",
+      "tagline": "A DRAFT reply with a policy cite — the Send button stays yours.",
+      "why": "First responses rot in the queue while people hunt the help center. This Bot drafts against the policy source of truth and will not send, refund, or \"make them whole\" on its own.\n",
+      "plugins": [
+        "Gmail"
+      ],
+      "featured": true,
+      "official_use_case": false,
+      "path": "templates/support/support-replies",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/support/support-replies/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/support/support-replies",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "support",
+        "replies",
+        "policy",
+        "l1"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "eng",
+      "name": "Eng",
+      "lead": "pr-reviewer",
+      "bots": [
+        "bug-reproduction",
+        "issue-drafter",
+        "pr-reviewer"
+      ],
+      "why": "Staging reports stall when repro, the unsent issue, and the risk review live in one undifferentiated chat.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/eng/team.yaml"
+    },
+    {
+      "id": "loop",
+      "name": "Loop",
+      "lead": "evidence-packager",
+      "bots": [
+        "ci-sweeper",
+        "pr-reviewer",
+        "changelog",
+        "evidence-packager"
+      ],
+      "why": "Inner-loop coding agents still need an outer evidence/verdict loop before anyone merges, tags, or writes the ship rationale.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/loop/team.yaml"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "lead": "competitor-watch",
+      "bots": [
+        "competitor-watch",
+        "content-remix",
+        "newsletter-desk"
+      ],
+      "why": "Competitor noise, channel variants, and the weekly issue get mixed until someone diffs, remixes, and still does not publish.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/marketing/team.yaml"
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "lead": "installer",
+      "bots": [
+        "installer",
+        "roster",
+        "router",
+        "foundry"
+      ],
+      "why": "Standing up a catalog team, cutting a bloated fleet, routing work, and minting the next contract are four jobs, not one Setup dump.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/meta/team.yaml"
+    },
+    {
+      "id": "ops",
+      "name": "Ops",
+      "lead": "chief-of-staff",
+      "bots": [
+        "chief-of-staff",
+        "expense-manager",
+        "vendor-inbox"
+      ],
+      "why": "The week hides in Slack, receipts, and vendor mail until someone maps it to priorities without sending a chase.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/ops/team.yaml"
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "lead": "inbox-triage",
+      "bots": [
+        "inbox-triage",
+        "calendar-defender",
+        "subscription-audit"
+      ],
+      "why": "Inbox zero fails when mail, meetings, and unused subs are one Bot that is tempted to send, decline, and unsubscribe.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/personal/team.yaml"
+    },
+    {
+      "id": "product",
+      "name": "Product",
+      "lead": "product-performance",
+      "bots": [
+        "product-performance",
+        "feature-ask-collator",
+        "launch-coordinator"
+      ],
+      "why": "Latency, Slack asks, and launch day collide unless one Bot owns evidence, one clusters asks, and one refuses to publish.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/product/team.yaml"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "lead": "research-desk",
+      "bots": [
+        "research-desk",
+        "cited-brief",
+        "source-interrogator"
+      ],
+      "why": "Deep briefs, three-minute answers, and assumption hunts are different jobs; mixing them hides the not-found list.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/research/team.yaml"
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "lead": "sales-outbound",
+      "bots": [
+        "sales-outbound",
+        "meeting-prep",
+        "call-followup"
+      ],
+      "why": "Outbound volume is useless if the next call is unbriefed and the recap never gets written down before it is sent.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/sales/team.yaml"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "lead": "account-health",
+      "bots": [
+        "account-health",
+        "support-replies",
+        "promise-log"
+      ],
+      "why": "Renewals slip when health is a vibe, replies go out uncited, and promises evaporate after the call.\n",
+      "autonomy": "L1",
+      "yaml_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/teams/success/team.yaml"
+    }
+  ]
+}

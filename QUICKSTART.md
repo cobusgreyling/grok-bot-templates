@@ -2,11 +2,25 @@
 
 You need [Grok Bot](https://x.ai/bot) (desktop app; eligible Cursor / SuperGrok plan). This catalog does not run the Bot for you. It gives you an operating contract to paste.
 
-## Option A — one Bot
+## Option A — installer Bot (no Node)
+
+1. Create a Bot named `Setup`
+2. Paste this URL and send:
+
+```
+https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
+```
+
+3. Tap a team (try **Eng**)
+4. Connect the plugins it lists
+5. Stay at L1 for a week
+
+## Option B — one Bot, copy the PROFILE
+
+Browse the [Pages catalog](https://cobusgreyling.github.io/grok-bot-templates/) and hit **Copy PROFILE URL**, or:
 
 ```bash
-npx @cobusgreyling/grokbot list
-npx @cobusgreyling/grokbot init pr-reviewer --print
+npx --yes github:cobusgreyling/grok-bot-templates init pr-reviewer --print
 ```
 
 1. In Grok Bot: **New → Create new agent**
@@ -16,32 +30,28 @@ npx @cobusgreyling/grokbot init pr-reviewer --print
 5. Send the first task at the bottom of the profile
 6. Do not enable a routine until two runs look right
 
-## Option B — a team
+## Option C — a team from the CLI
 
 ```bash
-npx @cobusgreyling/grokbot init --team eng --out ./eng-bots
+npx --yes github:cobusgreyling/grok-bot-templates init --team eng --out ./eng-bots
 ```
 
 Create the three Bots from `./eng-bots/*/PROFILE.md`, put them in one group, paste `TEAM.md` kickoff.
 
-## Option C — installer Bot
-
-1. Create a Bot named `Setup`
-2. Paste https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md
-3. Tap a team
-4. Connect the plugins it lists
-5. Stay at L1 for a week
-
 ## Option D — score a contract you wrote
 
 ```bash
-npx @cobusgreyling/grokbot new onboard-ledger --category ops
+npx --yes github:cobusgreyling/grok-bot-templates new onboard-ledger --category ops
 # edit templates/ops/onboard-ledger/template.yaml
-npx @cobusgreyling/grokbot score onboard-ledger
-npx @cobusgreyling/grokbot validate
+npx --yes github:cobusgreyling/grok-bot-templates score onboard-ledger
+npx --yes github:cobusgreyling/grok-bot-templates validate
 ```
 
 Ready means **≥ 80** and a declared autonomy level.
+
+```bash
+npx --yes github:cobusgreyling/grok-bot-templates score --badge --md
+```
 
 ## What "week one" means
 

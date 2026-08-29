@@ -15,7 +15,6 @@ if (result.errors.length) {
 }
 const pkg = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
 const catalog = {
-  generated_at: new Date().toISOString(),
   version: pkg.version,
   spec: "https://github.com/cobusgreyling/grok-bot-templates/blob/main/SPEC.md",
   counts: result.counts,

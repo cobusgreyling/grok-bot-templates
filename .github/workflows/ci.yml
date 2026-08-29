@@ -19,6 +19,8 @@ jobs:
       - run: npm run ci
       - name: Rendered markdown is not dirty
         run: |
-          git add -A
-          git diff --cached --exit-code -- templates skills routines docs/index.html catalog/catalog.json START.md \
+          npm run build
+          git add templates skills routines docs/index.html START.md
+          git diff --cached --exit-code -- templates skills routines docs/index.html START.md \
             || { echo "Run npm run build and commit generated files"; exit 1; }
+          # catalog.json is rebuilt for the Pages site; timestamp-free and not a drift gate

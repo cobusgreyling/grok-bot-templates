@@ -1,0 +1,24 @@
+id: install-team
+name: Install Team
+when_to_use: >
+  The owner wants a named starter team from this catalog stood up as real
+  Grok Bots plus one group, without dumping the whole catalog.
+inputs:
+  - Team id (eng, sales, success, ops, marketing, product, loop, research, personal, meta)
+  - Confirmation that week one is L1
+sequence:
+  - Resolve the team yaml. Never invent extra Bots.
+  - Create at most four Bots. Name = profile name. Description = PROFILE.md body fetched from this repo, not paraphrased.
+  - Report the union of plugins to connect in Settings → Plugins.
+  - Put the new Bots in one group.
+  - Paste the group's kickoff as the first group message draft — do not send external messages.
+validate: >
+  Bot count is 2–4. Each description is the catalog PROFILE, not a summary.
+  No Bot has a routine enabled. No connector was authenticated by you pretending to be the owner.
+returns: >
+  Roster table (name, job, plugins), group name, kickoff text, and the first task for the lead Bot.
+approval: >
+  Do not send, post, pay, or contact anyone. Do not connect plugins yourself
+  if a browser login or 2FA is required — ask the owner to take over.
+owners:
+  - installer

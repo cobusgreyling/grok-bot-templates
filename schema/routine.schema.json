@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cobusgreyling/grok-bot-templates/schema/routine.schema.json",
+  "title": "Grok Bot Routine",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "owner",
+    "cadence",
+    "skill",
+    "expected_result",
+    "approval_boundary",
+    "missing_source",
+    "test_first"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{1,62}$" },
+    "name": { "type": "string" },
+    "owner": { "type": "string" },
+    "cadence": { "type": "string", "minLength": 8 },
+    "skill": { "type": "string" },
+    "input_source": { "type": "string" },
+    "expected_result": { "type": "string", "minLength": 24 },
+    "approval_boundary": { "type": "string", "minLength": 24 },
+    "missing_source": { "type": "string", "minLength": 24 },
+    "test_first": { "type": "boolean" },
+    "prompt": { "type": "string", "minLength": 40 }
+  }
+}

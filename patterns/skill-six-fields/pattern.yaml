@@ -1,0 +1,12 @@
+id: skill-six-fields
+name: Skill six fields
+summary: >
+  A useful skill states when to use it, inputs, sequence, how to validate,
+  what to return, and what requires approval.
+rule: >
+  Save a skill only after a successful run. Enable it per Bot under
+  Settings → Plugins → Yours if it does not appear in /.
+anti_pattern: A skill that is a vibe paragraph with no validation or approval field.
+source: https://docs.x.ai/grok-bot/skills-routines-and-automations
+applies_to:
+  - skills

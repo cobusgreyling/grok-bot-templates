@@ -1,0 +1,14 @@
+id: shared-computer-is-not-isolation
+name: Shared computer is not isolation
+summary: >
+  Every Bot on an account uses the same cloud computer — cookies, files,
+  CLI credentials. Separate Bots are not a security boundary.
+rule: >
+  Do not place a credential on the computer if another Bot should not use
+  it. Sign out when the whole roster should lose a service.
+anti_pattern: "The finance Bot is isolated because it is a different Bot."
+source: https://docs.x.ai/grok-bot/computer-and-apps
+applies_to:
+  - templates
+  - teams
+  - safety

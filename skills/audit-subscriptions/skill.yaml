@@ -1,0 +1,28 @@
+id: audit-subscriptions
+name: Audit Subscriptions
+when_to_use: >
+  Mail is full of receipts and renewal notices, and the owner needs a
+  keep-or-cancel list with evidence of last use — not a bot that
+  unsubscribes on its own.
+inputs:
+  - Gmail (receipts, invoices, "your subscription", renewal mail)
+  - Time window (default last 90 days)
+  - Owner keep-list if one was saved
+sequence:
+  - Search the mailbox for receipts, invoices, and renewal notices in the window. Do not mark read.
+  - Cluster by vendor. Record last charge date, amount, cadence, and the message link.
+  - Look for last-use evidence in the same mailbox (login alerts, product mail). If none, write "no use found".
+  - Recommend keep, review, or cancel. Draft an unsubscribe or cancel note labeled DRAFT.
+  - In week one never click unsubscribe, never send, and never chat a vendor.
+validate: >
+  Nothing was unsubscribed, sent, or deleted. Every row has a mail
+  link. Amounts are quoted from the receipt, not guessed.
+returns: >
+  Subscription table: vendor, last charge, amount, last-use evidence
+  or "no use found", recommendation, unsent cancel draft. Handle-today
+  top five.
+approval: >
+  Do not unsubscribe, send, or delete mail. Newsletter and vendor
+  cancel clicks are L2+ after the owner approves the list.
+owners:
+  - subscription-audit

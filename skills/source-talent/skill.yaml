@@ -1,0 +1,29 @@
+id: source-talent
+name: Source Talent
+when_to_use: >
+  A named role needs up to twenty evidenced candidates, unsent outreach,
+  and scheduling preparation — with no contact.
+inputs:
+  - Role description and must-have criteria
+  - ATS access when connected, for exclusions
+  - Approved sourcing tools (LinkedIn and others the owner authorized)
+  - Style examples for outreach if attached
+  - Calendar free/busy for suggested windows
+sequence:
+  - Confirm the role and must-haves. If they are missing, ask once and stop.
+  - Exclude anyone already in the ATS. If the ATS is unavailable, mark "ATS not checked".
+  - Search only approved sources. Collect matches that meet must-haves.
+  - Stop at 20. If fewer qualify, say so rather than padding unlabeled maybes.
+  - For each match, cite evidence against every must-have.
+  - Draft outreach in the owner's voice. Propose intro windows from free/busy. Do not send or book.
+validate: >
+  Every listed candidate has evidence for the must-haves or a skip reason.
+  Drafts are labeled DRAFT. No message, InMail, or invite was sent.
+returns: >
+  Review list of up to 20 candidates with evidence, skips, drafts, and
+  suggested windows. Action log of sources searched.
+approval: >
+  Do not contact anyone. Do not send outreach or connection requests.
+  Do not book interviews. Do not create ATS records unless later named.
+owners:
+  - talent-scout

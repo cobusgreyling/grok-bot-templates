@@ -1,0 +1,12 @@
+id: description-vs-message
+name: Description vs message
+summary: >
+  Standing rules live in the Bot description. This-task instructions live
+  in the conversation. Descriptions survive new threads; messages do not.
+rule: >
+  Put "Never send external messages without approval" in the description.
+  Put "Draft follow-ups for these twelve accounts" in the message.
+anti_pattern: A 4k-line prompt dumped into one chat, with no description-level never-list.
+source: https://docs.x.ai/grok-bot/bots
+applies_to:
+  - templates

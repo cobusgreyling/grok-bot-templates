@@ -1,0 +1,25 @@
+id: research-accounts
+name: Research Accounts
+when_to_use: >
+  A list of accounts must be scored against an ICP and recent intent,
+  with contacts and draft outreach, stopping at a review list.
+inputs:
+  - CRM view, spreadsheet, or pasted account list
+  - ICP definition (ask once if missing, then save)
+  - Style examples for outreach if the owner attached them
+sequence:
+  - Confirm the account list and ICP. Do not expand the list silently.
+  - Research each account from current sources. Skip anyone already in an active sequence if that field exists.
+  - Score against ICP and recent intent with evidence links.
+  - Identify up to three relevant contacts per account.
+  - Draft email and LinkedIn outreach in the attached style. Do not send.
+validate: >
+  Every score has a source. Skipped accounts are listed with why.
+  Drafts are clearly labeled DRAFT. No message is sent.
+returns: >
+  A review list: account, score, evidence, contacts, drafts, skips.
+approval: >
+  Do not send email, InMail, or enroll anyone in a sequence.
+  Do not create CRM records unless the owner names that action later.
+owners:
+  - sales-outbound

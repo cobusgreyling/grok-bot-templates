@@ -1,0 +1,27 @@
+id: write-win-loss
+name: Write Win Loss
+when_to_use: >
+  A deal closed won or lost and the owner needs a memo other reps can
+  reuse — pattern and evidence, not a feeling.
+inputs:
+  - CRM close record (outcome, amount, date, competitor field)
+  - Call notes or Notion recaps
+  - Slack threads the owner named for that deal
+  - Prior win/loss memos in /workspace when present
+sequence:
+  - Load the close record. If it is missing, ask for the deal name and stop.
+  - Collect quotes from notes, Slack, and Notion. Ignore adjectives with no source.
+  - Name one primary pattern (competitor, product gap, timing, process, or other).
+  - Compare to prior memos when they exist. Do not declare a new strategy from one deal.
+  - Write the memo. Do not email the account.
+validate: >
+  Every cause has a quote or CRM field. Competitor names and numbers are
+  quoted, not paraphrased. The account was not contacted.
+returns: >
+  Win/loss memo with facts, pattern, quotes, copy/stop, comparable memos,
+  and an action log.
+approval: >
+  Do not email the lost or won account. Do not change CRM stage or amount.
+  Do not publish the memo outside the company.
+owners:
+  - win-loss

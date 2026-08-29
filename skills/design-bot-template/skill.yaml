@@ -1,0 +1,29 @@
+id: design-bot-template
+name: Design Bot Template
+when_to_use: >
+  The owner describes a job, a pain, or a keyword and needs a share-safe
+  Grok Bot operating contract that would pass this repository's schema and
+  Bot Ready score, not a cute persona.
+inputs:
+  - Outcome the Bot must own (one sentence)
+  - Sources and plugins that actually exist for this owner
+  - Autonomy target (default L1)
+  - Approval boundary (what must never happen)
+sequence:
+  - Parse the outcome. Reject catch-all jobs such as general helper.
+  - Diagnose missing sources, missing deliverable shape, hallucination risk, and autonomy drift.
+  - Fill every required template.yaml field from SPEC.md.
+  - Write PROFILE-ready description text with job, sources, how, deliverable, never-list, first task, no-data policy.
+  - Score it mentally against Bot Ready. If under 80, rewrite before showing it.
+validate: >
+  Every required SPEC field is present. approval_never has at least three
+  items including one of send/pay/merge/publish/production. No secrets or
+  internal URLs. First task is runnable on an empty chat.
+returns: >
+  A complete template.yaml (or PROFILE.md) the owner can paste, plus the
+  Bot Ready checklist with pass/fail per item.
+approval: >
+  Do not create Bots on the owner's account until they say to create them.
+  Do not enable routines. Do not attach a logo.
+owners:
+  - foundry

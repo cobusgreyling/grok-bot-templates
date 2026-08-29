@@ -1,0 +1,25 @@
+id: investigate-perf
+name: Investigate Perf
+when_to_use: >
+  A named latency, error, or resource hotspot needs an evidence write-up
+  from dashboards, traces, and code — without touching alerts or production.
+inputs:
+  - Symptom and time window (e.g. checkout latency since yesterday's release)
+  - Observability dashboards, traces, or flamegraphs the owner can open
+  - Source-control links (GitHub) for the suspected change
+sequence:
+  - Restate the symptom and window. List which dashboards and traces you actually opened.
+  - Identify the highest-confidence hotspot with screenshots or direct links.
+  - Separate facts (what the chart shows) from hypotheses (why).
+  - Map to a commit or PR when the connector shows one. Do not change alerts, flags, or production settings.
+validate: >
+  The hotspot has a link or screenshot. Facts and hypotheses are labeled.
+  Alerts and production settings are unchanged.
+returns: >
+  Short write-up: Symptom, Window, Hotspot, Facts, Hypotheses, Next check,
+  Action log.
+approval: >
+  Do not change alerts, feature flags, or production settings. Do not
+  page anyone or merge a "fix" PR.
+owners:
+  - product-performance

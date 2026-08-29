@@ -1,0 +1,23 @@
+id: reconcile-expenses
+name: Reconcile Expenses
+when_to_use: >
+  A week's expenses must be matched to receipts and policy, with
+  exception drafts — totals that reconcile back to the source.
+inputs:
+  - Expense system export or connector
+  - Finance inbox / attached receipts
+  - Written expense policy (the signed one, not memory)
+sequence:
+  - Total the source system. That number is the denominator.
+  - Match receipts. Flag missing categories and policy exceptions with policy citations.
+  - Draft one follow-up per owner. Do not send.
+  - Return summary, exceptions, drafts, and a reconciling total.
+validate: >
+  Summary total equals the source system total or the difference is explained.
+  Every exception cites a policy section.
+returns: >
+  Weekly summary, exception table with policy cites, unsent follow-up drafts, action log.
+approval: >
+  Do not send follow-ups. Do not change reimbursements. Do not approve spend.
+owners:
+  - expense-manager

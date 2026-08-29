@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cobusgreyling/grok-bot-templates/schema/template.schema.json",
+  "title": "Grok Bot Template",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "title",
+    "category",
+    "version",
+    "status",
+    "job",
+    "tagline",
+    "why",
+    "autonomy",
+    "plugins",
+    "sources",
+    "deliverable",
+    "approval_never",
+    "first_task",
+    "no_data",
+    "working_style",
+    "never",
+    "share_safe"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,62}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 48
+    },
+    "title": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 80
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "meta",
+        "engineering",
+        "product",
+        "sales",
+        "marketing",
+        "ops",
+        "support",
+        "research",
+        "personal",
+        "legal",
+        "finance",
+        "creator"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "stable", "deprecated"]
+    },
+    "featured": { "type": "boolean" },
+    "official_use_case": { "type": "boolean" },
+    "job": { "type": "string", "minLength": 60 },
+    "tagline": { "type": "string", "minLength": 12, "maxLength": 140 },
+    "why": { "type": "string", "minLength": 24 },
+    "soul": { "type": "string", "minLength": 40 },
+    "autonomy": {
+      "type": "string",
+      "enum": ["L0", "L1", "L2", "L3"]
+    },
+    "plugins": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 2 }
+    },
+    "deliverable": { "type": "string", "minLength": 40 },
+    "approval_never": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "minLength": 4 }
+    },
+    "approval_ask": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 4 }
+    },
+    "first_task": { "type": "string", "minLength": 40 },
+    "no_data": { "type": "string", "minLength": 40 },
+    "working_style": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "never": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]{1,62}$"
+      }
+    },
+    "routine": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "cadence", "skill"],
+          "properties": {
+            "id": { "type": "string" },
+            "cadence": { "type": "string", "minLength": 8 },
+            "skill": { "type": "string" },
+            "timezone_note": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "handoffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["to", "when"],
+        "properties": {
+          "to": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{1,62}$"
+          },
+          "when": { "type": "string", "minLength": 8 }
+        }
+      }
+    },
+    "team_role": {
+      "type": "string",
+      "enum": ["lead", "specialist", "router", "reviewer", "installer"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "example_first_run": { "type": "string", "minLength": 80 },
+    "share_safe": { "type": "boolean" },
+    "docs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 8 }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+id: review-pr-risk
+name: Review PR Risk
+when_to_use: >
+  An open pull request needs a review that starts with what can break,
+  what is untested, and what the description promised but the diff did not do.
+inputs:
+  - GitHub connector or a pasted PR URL
+  - Repository access on the shared computer if already cloned
+  - CI logs linked from the PR when present
+sequence:
+  - Open the PR. If you cannot, stop and say so.
+  - Read the description, the diff, and CI — in that order.
+  - List breakage risk with file paths.
+  - List untested paths. If CI is missing, write "CI not found" rather than "tests look fine".
+  - Diff the description against the diff (context gap).
+  - Nits last. Verdict is one of request changes, comment, or approve-with-notes.
+validate: >
+  Every risk cites a path. No invented files. No coverage percentages unless
+  they appear in CI output. Facts and inferences are labeled.
+returns: >
+  A review pack with Risk, Tests, Context gap, Nits, Verdict, Action log.
+  Not posted as a GitHub comment unless approved.
+approval: >
+  Never merge, push, comment on GitHub, request reviewers, or change
+  status checks without explicit in-chat approval.
+owners:
+  - pr-reviewer

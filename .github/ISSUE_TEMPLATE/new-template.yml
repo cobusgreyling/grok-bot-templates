@@ -1,0 +1,57 @@
+name: New template
+description: Propose a Grok Bot operating contract for the catalog
+title: "template: "
+labels: ["template"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [SPEC.md](https://github.com/cobusgreyling/grok-bot-templates/blob/main/SPEC.md) first.
+        Fastest path: `npx @cobusgreyling/grokbot new my-job --category ops` then open a PR.
+  - type: input
+    id: job
+    attributes:
+      label: One-sentence job
+      description: Repeatable outcome, not a department.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - meta
+        - engineering
+        - product
+        - sales
+        - marketing
+        - ops
+        - support
+        - research
+        - personal
+        - legal
+        - finance
+        - creator
+    validations:
+      required: true
+  - type: dropdown
+    id: autonomy
+    attributes:
+      label: Week-one autonomy
+      options: [L0, L1, L2, L3]
+      default: 1
+    validations:
+      required: true
+  - type: textarea
+    id: never
+    attributes:
+      label: Standing never-list
+      description: What this Bot must not do without a later promotion.
+    validations:
+      required: true
+  - type: textarea
+    id: first
+    attributes:
+      label: First task
+    validations:
+      required: true

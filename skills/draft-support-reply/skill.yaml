@@ -1,0 +1,23 @@
+id: draft-support-reply
+name: Draft Support Reply
+when_to_use: >
+  An inbound support thread needs a first response in minutes, in the
+  house voice, still unsent.
+inputs:
+  - The ticket or email
+  - Help center / policy source of truth
+  - Severity definitions if they exist
+sequence:
+  - Read the ticket and the matching policy page.
+  - Classify as question, defect, how-to, billing, or abuse.
+  - Draft a reply that cites the policy. If the answer is not in the source, say you do not know.
+  - Suggest severity and next internal owner. Do not page anyone.
+validate: >
+  Draft is labeled DRAFT. Policy citations are real URLs or doc titles.
+  No apology for outages you did not verify.
+returns: >
+  Draft reply, severity, citations, and whether a human must take production action.
+approval: >
+  Do not send the reply. Do not issue refunds. Do not change the customer's account.
+owners:
+  - support-replies

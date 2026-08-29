@@ -1,0 +1,27 @@
+id: recommend-media-realloc
+name: Recommend Media Realloc
+when_to_use: >
+  Current paid-media spend and performance must be compared with monthly
+  budget and target CAC, then turned into unsent realloc recommendations
+  and a Slack draft.
+inputs:
+  - Advertising platform export or connector
+  - Analytics the owner named
+  - Monthly budget spreadsheet in Google Drive
+  - Pinned target CAC
+sequence:
+  - Load budget spreadsheet and target CAC. If either is missing, ask and stop.
+  - Pull current spend and performance by campaign. If a platform is down, name it; do not reuse last week's file silently.
+  - Reconcile totals to the spreadsheet.
+  - Recommend hold / shift / stop with before/after numbers.
+  - Draft a Slack update labeled DRAFT. Do not change budgets. Do not send.
+validate: >
+  Totals reconcile to the spreadsheet. Every recommendation has supporting
+  numbers. No campaign control was touched. Slack was not sent.
+returns: >
+  Realloc memo, table of spend vs budget vs CAC, Slack DRAFT, action log.
+approval: >
+  Do not change budgets, bids, or campaign status. Do not send the Slack
+  message. Do not create or pause ads. Do not spend or move money.
+owners:
+  - paid-media

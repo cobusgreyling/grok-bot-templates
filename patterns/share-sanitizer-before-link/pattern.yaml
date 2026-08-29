@@ -1,0 +1,14 @@
+id: share-sanitizer-before-link
+name: Sanitize before you share
+summary: >
+  A public share link copies identity, description, skills, and routines.
+  It does not copy your computer. Still: strip secrets first.
+rule: >
+  Run Share Sanitizer (or the same review) before copying x.ai/bot/<id>.
+  Recipients accept third-party bot terms. Do not add a random share URL
+  on the owner's behalf.
+anti_pattern: Shipping a template with an API key in the description.
+source: https://docs.x.ai/grok-bot/bots
+applies_to:
+  - templates
+  - sharing

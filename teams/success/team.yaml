@@ -1,0 +1,20 @@
+id: success
+name: Success
+lead: account-health
+bots:
+  - account-health
+  - support-replies
+  - promise-log
+why: >
+  Renewals slip when health is a vibe, replies go out uncited, and
+  promises evaporate after the call.
+group_kickoff: >
+  @Account Health rank the portfolio against saved thresholds.
+  @Support Replies draft unsent first responses that cite policy.
+  @Promise Log extract commitments from the latest call notes.
+  Do not contact customers. Do not edit the CRM. Do not issue refunds.
+plugins:
+  - Slack
+  - Gmail
+max_bots: 4
+autonomy: L1

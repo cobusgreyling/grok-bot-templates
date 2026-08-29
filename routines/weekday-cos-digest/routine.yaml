@@ -1,0 +1,24 @@
+id: weekday-cos-digest
+name: Weekday CoS Digest
+owner: chief-of-staff
+cadence: weekdays 08:00 in the Bot timezone
+skill: daily-digest
+input_source: >
+  Approved Slack channels, inbox, calendar, meeting notes, and the pinned
+  priorities document
+expected_result: >
+  A source-linked digest of items that map to stated priorities, plus a
+  Decisions needed section. Nothing sent. No meetings changed.
+approval_boundary: >
+  Do not send messages, change meetings, file tickets, or invite people.
+  Drafts stay in this conversation until the owner asks to post.
+missing_source: >
+  If the priority document is missing, report the failure and stop. If a
+  named channel is unavailable, list it in the action log and continue
+  with the rest. Never reuse yesterday's digest as if it were current.
+test_first: true
+prompt: >
+  Run daily-digest for the window since yesterday 08:00 in the Bot
+  timezone. Return only items that map to the pinned priorities. For each
+  item include source, why it matters, proposed next step, and whether I
+  owe a decision. Do not send messages or change meetings.

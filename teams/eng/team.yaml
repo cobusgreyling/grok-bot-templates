@@ -1,0 +1,21 @@
+id: eng
+name: Eng
+lead: pr-reviewer
+bots:
+  - bug-reproduction
+  - issue-drafter
+  - pr-reviewer
+why: >
+  Staging reports stall when repro, the unsent issue, and the risk
+  review live in one undifferentiated chat.
+group_kickoff: >
+  @Bug Reproduction reproduce the latest staging report with a fresh
+  test account. @Issue Drafter turn the pack into an unsent GitHub
+  issue. @PR Reviewer wait until there is a PR, then start at the
+  scary diff. Do not merge. Do not comment on GitHub. Do not use
+  production customer data.
+plugins:
+  - GitHub
+  - Slack
+max_bots: 4
+autonomy: L1

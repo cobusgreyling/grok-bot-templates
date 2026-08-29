@@ -1,0 +1,24 @@
+id: detect-docs-drift
+name: Detect Docs Drift
+when_to_use: >
+  README, API docs, or comments claim behavior that the current code may
+  not match, and the owner needs a draft doc diff — not a commit.
+inputs:
+  - GitHub repository or attached docs plus code
+  - Paths the owner named (README, API docs, OpenAPI, generated refs)
+  - Optional last-known-good tag
+sequence:
+  - Open the named docs and the code they describe (routes, flags, types, CLI).
+  - List each drift as doc claim vs code fact, with paths.
+  - Draft a doc diff the owner can paste. Prefer the smallest truthful edit.
+  - Do not commit, push, or merge. Do not "fix" the code to match a wrong README.
+validate: >
+  Every drift cites a doc path and a code path. No invented APIs. The
+  deliverable is a draft, unpublished.
+returns: >
+  Drift table plus a proposed doc patch. Action log of files read.
+approval: >
+  Do not commit, merge, or publish the docs. Do not edit GitHub wiki or
+  the production doc site.
+owners:
+  - docs-drift

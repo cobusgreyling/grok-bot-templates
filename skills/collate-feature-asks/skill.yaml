@@ -1,0 +1,24 @@
+id: collate-feature-asks
+name: Collate Feature Asks
+when_to_use: >
+  The same product request is living in many Slack threads and needs
+  one cluster with quotes, frequency, and a suggested issue — not a roadmap decision.
+inputs:
+  - Slack channels or exported threads the owner named
+  - Time window
+  - Existing issue tracker (to de-dupe)
+sequence:
+  - Search the named channels for asks in the window.
+  - Cluster by underlying job-to-be-done, not by the requester's wording.
+  - Attach representative quotes with links.
+  - Check the tracker for an existing issue.
+  - Draft a problem statement. Do not prioritize.
+validate: >
+  Every cluster has at least one link. Frequency is a count of threads, not a vibe.
+  No commitment language ("we will ship").
+returns: >
+  Cluster table: job, count, quotes, existing issue or none, draft problem statement.
+approval: >
+  Do not file issues, change the roadmap, or reply in Slack.
+owners:
+  - feature-ask-collator

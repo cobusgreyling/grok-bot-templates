@@ -1,0 +1,25 @@
+id: vendor-renewals
+name: Vendor Renewals
+when_to_use: >
+  Invoices, renewal notices, and vendor asks need a dated work list
+  from mail and Drive — follow-ups stay unsent.
+inputs:
+  - Gmail finance or vendor labels
+  - Google Drive vendor or AP folder
+  - Last week's vendor list if it exists in /workspace
+sequence:
+  - Scan the window for invoices, renewal notices, and vendor payment asks. Skip newsletters.
+  - Extract vendor, amount, currency, due date, and a source link. Amounts not in the source stay unknown.
+  - Diff against last week's list into new, unchanged, overdue, and renewed-since-last-run.
+  - Draft one follow-up per overdue or missing-info vendor. Label DRAFT. Do not send.
+  - Write the work list to /workspace/vendor-inbox.md.
+validate: >
+  Every row has a source link. No mail was sent. No invoice was marked paid.
+  Unknown amounts are labeled unknown, not guessed.
+returns: >
+  Work list grouped new / overdue / upcoming, unsent follow-up drafts,
+  action log of mail and Drive scanned.
+approval: >
+  Do not send chases. Do not pay invoices. Do not auto-renew or sign terms.
+owners:
+  - vendor-inbox

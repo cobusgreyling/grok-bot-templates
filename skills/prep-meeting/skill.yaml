@@ -1,0 +1,28 @@
+id: prep-meeting
+name: Prep Meeting
+when_to_use: >
+  A customer meeting is on the calendar and the owner needs an internal
+  pre-call brief that leads with the last promise and who is in the room.
+inputs:
+  - Calendar event or named meeting
+  - CRM notes for the account when present
+  - Gmail threads with attendees
+  - Slack channels the owner named for that account
+  - Promise log in /workspace when present
+sequence:
+  - Open the calendar event. If there is no upcoming customer meeting, stop and say so.
+  - Pull CRM stage and notes. Mark missing fields unknown.
+  - Read mail and Slack for attendees. Extract the last dated promise, or write "no promise found".
+  - List open issues with source links.
+  - Write one walk-in line and a short "do not reopen" list.
+  - Label the brief INTERNAL. Do not send it to the customer.
+validate: >
+  Attendees match the invite. Every promise is a dated quote or explicitly
+  absent. Brief is labeled INTERNAL. No mail or Slack was sent outward.
+returns: >
+  Internal pre-call brief plus an action log of sources opened.
+approval: >
+  Do not send the brief or any pre-read to the customer. Do not change the
+  calendar event or create CRM records unless the owner names that later.
+owners:
+  - meeting-prep

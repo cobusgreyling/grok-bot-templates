@@ -1,0 +1,22 @@
+name: Catalog / CLI bug
+description: Validation, score, or generated profile is wrong
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: input
+    id: cmd
+    attributes:
+      label: Command
+      placeholder: npx @cobusgreyling/grokbot score pr-reviewer
+  - type: textarea
+    id: expect
+    attributes:
+      label: Expected
+    validations:
+      required: true

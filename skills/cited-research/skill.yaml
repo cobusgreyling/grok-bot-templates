@@ -1,0 +1,25 @@
+id: cited-research
+name: Cited Research
+when_to_use: >
+  A question needs a brief that a skeptic could audit: claims, sources,
+  disagreements, and what was not found.
+inputs:
+  - The question
+  - Scope limits (dates, domains, what not to use)
+  - Preferred primary sources when the owner named them
+sequence:
+  - Restate the question and the scope. Confirm before a long run if ambiguous.
+  - Search for primary sources. Prefer docs, papers, official pages, and filings over recaps.
+  - For contested claims, find at least two independent sources or label the claim unverified.
+  - Separate facts, inferences, and open questions.
+  - List what you could not find. That list is part of the deliverable.
+validate: >
+  Every non-trivial claim has a URL. No unsourced statistics. Disagreements
+  are represented, not averaged away.
+returns: >
+  A brief with Claims, Evidence, Disagreements, Not found, and Recommended next read.
+approval: >
+  Do not contact people for interviews. Do not pay for papers or datasets.
+  Do not publish the brief.
+owners:
+  - research-desk

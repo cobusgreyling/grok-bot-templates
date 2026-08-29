@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cobusgreyling/grok-bot-templates/schema/team.schema.json",
+  "title": "Grok Bot Team",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "lead", "bots", "group_kickoff", "why", "max_bots"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{1,32}$" },
+    "name": { "type": "string", "minLength": 2, "maxLength": 48 },
+    "lead": { "type": "string", "pattern": "^[a-z][a-z0-9-]{1,62}$" },
+    "bots": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]{1,62}$" }
+    },
+    "why": { "type": "string", "minLength": 24 },
+    "group_kickoff": { "type": "string", "minLength": 40 },
+    "plugins": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "max_bots": { "type": "integer", "minimum": 2, "maximum": 6 },
+    "autonomy": { "type": "string", "enum": ["L0", "L1", "L2", "L3"] }
+  }
+}

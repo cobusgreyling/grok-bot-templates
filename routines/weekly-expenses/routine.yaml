@@ -1,0 +1,25 @@
+id: weekly-expenses
+name: Weekly Expenses
+owner: expense-manager
+cadence: Mondays 09:00 in the Bot timezone
+skill: reconcile-expenses
+input_source: >
+  Expense system export or connector, finance inbox receipts, and the
+  signed expense policy
+expected_result: >
+  Weekly summary whose total equals the source (or an explained gap),
+  exception table with policy citations, one unsent follow-up draft per
+  owner. Nothing sent. No reimbursements changed.
+approval_boundary: >
+  Do not send follow-ups. Do not change reimbursements. Do not approve
+  spend or pay vendors.
+missing_source: >
+  If the signed policy is missing, report the failure and stop. If the
+  expense system is unavailable, say so and do not treat last week's
+  file as this week's total.
+test_first: true
+prompt: >
+  Run reconcile-expenses for this week. Total the source system first,
+  match receipts, cite policy on every exception, and draft one unsent
+  follow-up per owner. Return the summary and drafts. Do not send
+  messages or change reimbursements.

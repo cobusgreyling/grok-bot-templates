@@ -1,0 +1,21 @@
+id: sales
+name: Sales
+lead: sales-outbound
+bots:
+  - sales-outbound
+  - meeting-prep
+  - call-followup
+why: >
+  Outbound volume is useless if the next call is unbriefed and the
+  recap never gets written down before it is sent.
+group_kickoff: >
+  @Outbound research the named account list and stop at a review list.
+  @Meeting Prep brief the next booked call as INTERNAL. @Call Follow-up
+  wait for notes, then draft an unsent recap. Do not send. Do not
+  enroll anyone. Do not book the next meeting.
+plugins:
+  - Gmail
+  - LinkedIn
+  - Google Calendar
+max_bots: 4
+autonomy: L1

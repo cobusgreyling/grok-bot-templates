@@ -1,0 +1,21 @@
+id: loop
+name: Loop
+lead: evidence-packager
+bots:
+  - ci-sweeper
+  - pr-reviewer
+  - changelog
+  - evidence-packager
+why: >
+  Inner-loop coding agents still need an outer evidence/verdict loop
+  before anyone merges, tags, or writes the ship rationale.
+group_kickoff: >
+  @CI Sweeper list failing checks without rerunning until green.
+  @PR Reviewer risk-review the open PR. @Changelog draft notes since
+  the last tag. @Evidence Packager package what was verified vs not
+  and stop before the verdict. Do not merge. Do not tag. Do not
+  publish a release.
+plugins:
+  - GitHub
+max_bots: 4
+autonomy: L1

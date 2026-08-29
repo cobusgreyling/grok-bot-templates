@@ -1,0 +1,20 @@
+id: meta
+name: Meta
+lead: installer
+bots:
+  - installer
+  - roster
+  - router
+  - foundry
+why: >
+  Standing up a catalog team, cutting a bloated fleet, routing work,
+  and minting the next contract are four jobs, not one Setup dump.
+group_kickoff: >
+  @Setup install the named starter team from the catalog. @Roster Coach
+  cut anything that is not earning its slot. @Fleet Router assign
+  incoming work to exactly one owner. @Foundry write a share-safe
+  contract for the missing job. Do not enable routines. Do not create
+  more than four Bots. Do not paraphrase PROFILE.md.
+plugins: []
+max_bots: 4
+autonomy: L1

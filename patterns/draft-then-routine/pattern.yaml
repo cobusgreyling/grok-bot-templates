@@ -1,0 +1,14 @@
+id: draft-then-routine
+name: Draft then routine
+summary: >
+  Start with a one-time task. Make it reliable. Save a skill. Test a second
+  input. Create a routine only when retries and failure cases are defined.
+rule: >
+  Week one is L1. Routines require test_first and a missing-source policy.
+  A test run performs real work — use safe inputs.
+anti_pattern: Enabling a nightly send on the same day you created the Bot.
+source: https://docs.x.ai/grok-bot/use-cases
+applies_to:
+  - templates
+  - routines
+  - skills

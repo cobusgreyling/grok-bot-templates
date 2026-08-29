@@ -1,0 +1,13 @@
+id: no-data-policy
+name: No-data / stale-data policy
+summary: >
+  If the source is unavailable, report the failure instead of using old
+  data. Missing CI is "CI not found", not "tests look fine".
+rule: >
+  Every template has no_data. Every routine has missing_source.
+  Yesterday's numbers are not today's.
+anti_pattern: Silent fallback to last week's spreadsheet.
+source: https://docs.x.ai/grok-bot/skills-routines-and-automations
+applies_to:
+  - templates
+  - routines

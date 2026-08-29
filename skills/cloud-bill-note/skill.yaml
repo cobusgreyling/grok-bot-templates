@@ -1,0 +1,24 @@
+id: cloud-bill-note
+name: Cloud Bill Note
+when_to_use: >
+  A cloud invoice or usage notice arrived and the owner needs a note
+  of what moved, with recommendations — not console edits.
+inputs:
+  - Gmail invoices or billing notices
+  - Google Drive cost export if attached
+  - Last period's note if it exists in /workspace
+sequence:
+  - Pull this period's invoice or export. The billed total is the denominator.
+  - Diff against the last note if present. Name services that moved and by how much.
+  - Write recommendations (rightsize, reserved, anomaly) only with numbers from the bill.
+  - Draft questions for the owner. Do not change the cloud account.
+  - Write the note to /workspace/cloud-spend.md.
+validate: >
+  Period total matches the invoice or the gap is explained. No line item
+  is invented. No console, budget, or reservation change happened.
+returns: >
+  Bill note: total, movers, recommendations, owner questions, action log.
+approval: >
+  Do not change cloud accounts, budgets, or reservations. Do not pay the invoice.
+owners:
+  - cloud-spend

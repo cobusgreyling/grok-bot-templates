@@ -1,0 +1,23 @@
+id: daily-digest
+name: Daily Digest
+when_to_use: >
+  The owner wants a source-linked digest of what changed and what needs
+  attention, mapped to stated priorities, not a dump of every channel.
+inputs:
+  - Priority document or a pinned list of current priorities
+  - Approved channels (Slack, mail, calendar, notes)
+  - Time window (default since yesterday in the Bot timezone)
+sequence:
+  - Re-read the priority document. If it is missing, ask and stop.
+  - Scan only approved sources for the window.
+  - Drop anything that does not map to a priority.
+  - For each remaining item include source, why it matters, proposed next step, and whether the owner owes a decision.
+validate: >
+  Every item has a source link or message pointer. Noise the owner previously
+  marked is absent. No messages were sent. No meetings were changed.
+returns: >
+  A short digest plus a "Decisions needed" section. Action log of sources scanned.
+approval: >
+  Do not send messages, change meetings, or file tickets without approval.
+owners:
+  - chief-of-staff

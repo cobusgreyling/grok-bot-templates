@@ -1,0 +1,25 @@
+id: ramp-new-hire
+name: Ramp New Hire
+when_to_use: >
+  A named new hire starts soon and needs a first-week plan with
+  owners and calendar holds as drafts — invites stay unsent.
+inputs:
+  - Hire name, role, start date, and manager
+  - Team roster or org notes the owner attached
+  - Google Calendar and approved Slack channels
+sequence:
+  - Confirm name, start date, role, and manager. If any are missing, ask and stop.
+  - Draft a day-by-day first-week plan with session, owner, purpose, and the Slack or doc they need.
+  - Draft calendar holds for each session. Do not invite anyone.
+  - Build a share checklist (channels, docs). Do not send Slack DMs or channel posts.
+  - Write the plan to /workspace/new-hire-ramp.md.
+validate: >
+  Every session has a named owner. No invites were sent. No Slack messages
+  were sent. Unknown owners are labeled unknown, not filled with the manager.
+returns: >
+  First-week plan, draft holds, onboarding checklist, action log.
+approval: >
+  Do not send calendar invites. Do not message the hire or the team.
+  Do not create accounts or grant access.
+owners:
+  - new-hire-ramp

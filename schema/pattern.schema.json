@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/cobusgreyling/grok-bot-templates/schema/pattern.schema.json",
+  "title": "Grok Bot Design Pattern",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "summary", "rule", "anti_pattern", "source"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{1,62}$" },
+    "name": { "type": "string" },
+    "summary": { "type": "string", "minLength": 24 },
+    "rule": { "type": "string", "minLength": 24 },
+    "anti_pattern": { "type": "string", "minLength": 16 },
+    "source": { "type": "string" },
+    "applies_to": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+id: sanitize-share
+name: Sanitize Share
+when_to_use: >
+  The owner wants to share a Bot as a public template and needs the
+  description, skills, and routines stripped of secrets, customer data,
+  and internal URLs before the link goes out.
+inputs:
+  - The Bot's current description, skill list, and routine text
+  - Optional extra files the owner is about to attach to the profile
+sequence:
+  - Read the description and any skill/routine text.
+  - Flag API keys, tokens, emails, customer names, internal hostnames, and staging URLs.
+  - Propose a redacted description. Do not silently delete standing safety rules.
+  - Confirm share-safe so identity, job, boundary, and first task remain; secrets gone.
+validate: >
+  No key-shaped strings, no @customer domains, no .internal hosts.
+  Approval boundaries are still present after redaction.
+returns: >
+  A share-safe PROFILE and a diff of what was removed, plus a reminder that
+  the link is public and does not copy the computer or logins.
+approval: >
+  Do not create the public share link yourself. The owner copies it from
+  the Bot after they accept the redaction.
+owners:
+  - sanitizer

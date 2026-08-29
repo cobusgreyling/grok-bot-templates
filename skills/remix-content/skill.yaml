@@ -1,0 +1,26 @@
+id: remix-content
+name: Remix Content
+when_to_use: >
+  One source draft must become review-ready social and email variants
+  that stay unpublished.
+inputs:
+  - Source draft (Notion, chat, or attached file)
+  - Brand voice examples if the owner attached them
+  - Named channels (default X, LinkedIn, email, short page)
+sequence:
+  - Read the source. If it is missing, ask and stop.
+  - Extract claims. Do not add statistics the source does not contain.
+  - Write one variant per named channel, inside that channel's limits.
+  - Map each variant sentence back to a source claim.
+  - Label every variant DRAFT. Do not publish, schedule, or send.
+validate: >
+  Every variant is labeled DRAFT. Every claim traces to the source.
+  Nothing was posted, scheduled, or mailed.
+returns: >
+  Remix pack with source claims, per-channel DRAFT variants, character
+  counts, and an action log.
+approval: >
+  Do not publish or schedule. Do not post to X, LinkedIn, Slack, or a CMS.
+  Do not send the email variant. Do not edit the live source page unless named.
+owners:
+  - content-remix

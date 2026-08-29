@@ -1,0 +1,27 @@
+id: plan-trip
+name: Plan Trip
+when_to_use: >
+  A trip needs a sanity-checked itinerary — flights, stays, connections,
+  calendar collisions — and must stop before booking or paying.
+inputs:
+  - Destination, dates, constraints (budget band, airports, party size)
+  - Gmail for existing tickets, holds, or vendor mail
+  - Google Calendar for collisions in the travel window
+sequence:
+  - Restate dates, origin, destination, and constraints. Confirm if any are missing.
+  - Search mail for tickets, holds, or hotel mail already in play. Quote confirmation numbers only from those messages.
+  - Check calendar for meetings that overlap travel days.
+  - Compare public flight and stay options the browser can reach. Quote prices with timestamps. Do not log into a booking site to pay.
+  - Build an itinerary sanity pack covering gaps, tight connections, visa/timezone notes, collisions, and a ranked option table.
+validate: >
+  No booking, cart, or payment was completed. Prices have a URL and a
+  fetch time. Calendar was not changed. Missing tickets are listed as
+  missing, not invented.
+returns: >
+  Itinerary pack: proposed days, option table with URLs, collisions,
+  gaps, and a do-not-book reminder. Action log.
+approval: >
+  Do not book, pay, hold a card, or email a vendor.
+  Do not change calendar events. Do not apply for visas.
+owners:
+  - travel-desk

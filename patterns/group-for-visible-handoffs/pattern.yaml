@@ -1,0 +1,12 @@
+id: group-for-visible-handoffs
+name: Group for visible handoffs
+summary: >
+  Use a group when several Bots need one shared outcome and visible
+  handoffs. Two to six Bots. One owner per stage. @mentions.
+rule: >
+  Kickoff names the outcome, who owns the next step, and the never-list.
+  Avoid @everyone. Too many parallel handoffs duplicate work.
+anti_pattern: Five Bots in DM hell with no group, or one Bot pretending to be five.
+source: https://docs.x.ai/grok-bot/chat-and-collaboration
+applies_to:
+  - teams

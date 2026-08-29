@@ -1,0 +1,26 @@
+id: watch-aeo
+name: Watch AEO
+when_to_use: >
+  A pinned query set must be rerun across public answer engines and AI
+  overviews as a standing visibility program, not a one-off chatbot check.
+inputs:
+  - Pinned query set and competitor set
+  - Public answer engines the browser can reach
+  - Prior AEO brief in /workspace when it exists
+sequence:
+  - Load the saved query set. If it is missing, ask and stop. Do not freelance new queries.
+  - Rerun each query with the same wording on the named engines. Timestamp fetches.
+  - Record who is cited (us vs competitors) with verbatim snippets and URLs.
+  - Diff against last brief. Label unverified appearances.
+  - Write an unpublished writing brief for gaps. Do not publish pages. Do not substitute a one-off chatbot paste.
+validate: >
+  Every citation was seen this run. Missing engines are named, not guessed.
+  No page was published. Queries match the pinned set.
+returns: >
+  AEO brief with reruns, citations, gaps, unpublished writing brief, and
+  action log of engines and timestamps.
+approval: >
+  Do not publish or update pages. Do not pay for placements. Do not
+  contact an answer-engine vendor as the brand.
+owners:
+  - aeo-watch

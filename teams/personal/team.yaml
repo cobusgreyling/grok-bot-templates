@@ -1,0 +1,22 @@
+id: personal
+name: Personal
+lead: inbox-triage
+bots:
+  - inbox-triage
+  - calendar-defender
+  - subscription-audit
+why: >
+  Inbox zero fails when mail, meetings, and unused subs are one Bot
+  that is tempted to send, decline, and unsubscribe.
+group_kickoff: >
+  @Inbox Triage bucket mail since yesterday and draft unsent replies.
+  @Calendar Defender protect deep-work blocks with decline drafts.
+  @Subscription Audit list unused subscriptions for approval.
+  Do not send. Do not delete. Do not change meetings. Do not
+  unsubscribe.
+plugins:
+  - Gmail
+  - Google Calendar
+  - Slack
+max_bots: 4
+autonomy: L1

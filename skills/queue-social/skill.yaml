@@ -1,0 +1,27 @@
+id: queue-social
+name: Queue Social
+when_to_use: >
+  One idea must become a week's worth of posts across named channels,
+  sitting in a review queue — none of them published.
+inputs:
+  - The idea, brief, or Notion page
+  - Voice examples (attached or a Notion style page)
+  - Named channels and the week to fill (default next seven days)
+sequence:
+  - Restate the idea in one sentence. Reject a catch-all "post more".
+  - Pull voice examples. Match length and stance; do not invent a brand voice.
+  - Draft seven items (or the named count) with day, channel, hook, body, CTA, and asset note. Label each DRAFT.
+  - Write them into the Notion queue or a workspace file. Do not schedule on X or any network.
+  - List what still needs an image or a fact check.
+validate: >
+  Nothing was posted, scheduled, or boosted. Each draft is original
+  to this idea (not a pasted competitor post). Channel and day are
+  explicit.
+returns: >
+  Queue table plus the Notion (or file) pointer, and a "needs asset
+  or source" list.
+approval: >
+  Do not publish, schedule, or reply on X or any network.
+  Do not email the list to a social tool.
+owners:
+  - social-queue

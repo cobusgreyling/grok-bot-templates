@@ -1,0 +1,22 @@
+id: product
+name: Product
+lead: product-performance
+bots:
+  - product-performance
+  - feature-ask-collator
+  - launch-coordinator
+why: >
+  Latency, Slack asks, and launch day collide unless one Bot owns
+  evidence, one clusters asks, and one refuses to publish.
+group_kickoff: >
+  @Product Performance investigate the named latency spike with
+  dashboards and traces. @Feature Ask Collator cluster Slack asks
+  without filing. @Launch Coordinator keep the launch checklist honest
+  and stop at go/no-go. Do not change production. Do not file issues.
+  Do not publish.
+plugins:
+  - GitHub
+  - Slack
+  - Notion
+max_bots: 4
+autonomy: L1

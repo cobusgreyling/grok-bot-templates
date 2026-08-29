@@ -1,0 +1,24 @@
+id: weekday-ci-sweep
+name: Weekday CI Sweep
+owner: ci-sweeper
+cadence: weekdays 09:00 in the Bot timezone
+skill: sweep-ci
+input_source: >
+  GitHub Actions (or linked CI) on named repositories, default branch
+  and open PRs since the last sweep
+expected_result: >
+  Sweep report: new failures, flakes, infra/timeouts, suggested holds,
+  with check names and run URLs. Nothing merged. No rerun-until-green.
+approval_boundary: >
+  Do not merge, push, or comment on GitHub. Do not cancel workflows or
+  change branch protection. At most one rerun, and only when a log is
+  truncated.
+missing_source: >
+  If GitHub is not connected or a named repo cannot be opened, report
+  the failure and stop for that repo. Do not invent jobs or treat a
+  missing log as green.
+test_first: true
+prompt: >
+  Run sweep-ci on the named repositories since yesterday 09:00. Split
+  new breakage from flakes, quote log lines, suggest owners, and list
+  holds. Do not merge. Do not rerun until green.

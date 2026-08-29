@@ -1,0 +1,29 @@
+id: sweep-ci
+name: Sweep CI
+when_to_use: >
+  CI on named repositories is red or flaky and the owner needs a
+  failure list with logs and owners — not a bot that reruns, cancels,
+  or merges.
+inputs:
+  - GitHub connector and the named repositories
+  - Default branch and the time window (default since last sweep)
+  - Optional CODEOWNERS or a pinned owner map
+sequence:
+  - List failing or cancelled checks on the default branch and on open PRs in the window. Do not invent jobs.
+  - Open the log for each distinct failure. Quote the error, path, and job name.
+  - Cluster duplicates. Count how often the same test failed.
+  - Suggest an owner from CODEOWNERS or the PR author. Do not assign on GitHub.
+  - At most one rerun, and only when the log is truncated — write that down. Never rerun-until-green.
+  - Write the sweep memo. Do not cancel runs, push, merge, or mute required checks.
+validate: >
+  Every row cites a check URL or log line. Flakes are labeled when the
+  same job failed then passed without a code change; otherwise "flake
+  unknown". No merge and no retry loop.
+returns: >
+  CI sweep: failing jobs, cluster, log quote, suggested owner, flake
+  note, action log. At most one truncated-log rerun recorded.
+approval: >
+  Do not merge, push, or comment on GitHub. Do not cancel workflows or
+  change branch protection. Do not rerun until green.
+owners:
+  - ci-sweeper

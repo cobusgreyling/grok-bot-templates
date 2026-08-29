@@ -1,0 +1,22 @@
+id: draft-issue
+name: Draft Issue
+when_to_use: >
+  A Slack thread, email, or repro pack must become a GitHub issue
+  before the bug evaporates — written down, not posted until approved.
+inputs:
+  - Thread, report, or repro pack
+  - Target repository
+  - Issue template if the repo has one
+sequence:
+  - Extract title, actual, expected, steps, environment, and links.
+  - Prefer the repro pack over the original complaint when both exist.
+  - Fill the repo's issue template. Label suggestions only.
+  - Stop with a preview. Do not click Submit.
+validate: >
+  Steps are numbered. Links work. No customer PII. No "please fix" without expected behavior.
+returns: >
+  Issue title, body in the repo template, suggested labels, and a "ready to file" checkbox for the owner.
+approval: >
+  Do not create the GitHub issue until the owner says to file it.
+owners:
+  - issue-drafter

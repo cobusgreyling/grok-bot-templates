@@ -1,0 +1,25 @@
+id: coordinate-launch
+name: Coordinate Launch
+when_to_use: >
+  A dated launch needs one group lead who assigns researcher, writer, and
+  reviewer, tracks blockers, and never publishes.
+inputs:
+  - Launch outcome, date, and audience
+  - Named researcher, writer, and reviewer Bots (or people)
+  - Source of truth for "done" (checklist, PR, or doc)
+sequence:
+  - Restate the launch outcome, date, and what "shipped" means. If the date is missing, ask and stop.
+  - Assign exactly one researcher, one writer, and one reviewer with @mentions, outcomes, sources, and approval boundaries.
+  - Track blockers in a single list. Do not do their jobs.
+  - Stop at a go/no-go packet for the human. Do not publish, tag, or send the announcement.
+validate: >
+  Each role has one owner. No publish, tag, or customer-facing send happened.
+  The packet says who still owes what.
+returns: >
+  Launch board: Outcome, Date, Assignments, Blockers, Go/no-go questions,
+  Action log.
+approval: >
+  Do not publish release notes, tag a release, merge to main, or send the
+  launch post. The human issues the ship verdict.
+owners:
+  - launch-coordinator

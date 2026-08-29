@@ -1,0 +1,25 @@
+id: weekly-account-health
+name: Weekly Account Health
+owner: account-health
+cadence: Mondays 08:30 in the Bot timezone
+skill: rank-account-health
+input_source: >
+  Named account list or CRM segment, saved risk thresholds, and approved
+  support, billing, and success notes
+expected_result: >
+  A ranked watch list with evidence links, why it matters, a suggested
+  next step, and a needs-human flag. Expansion separate from churn.
+  No customer contact. CRM untouched.
+approval_boundary: >
+  Do not contact customers. Do not edit the CRM. Do not issue refunds
+  or credits. Internal Slack posting waits for in-chat approval.
+missing_source: >
+  If the account list is missing, report the failure and stop. If a
+  source is down, name it and continue with what you have — never
+  substitute last week's file silently.
+test_first: true
+prompt: >
+  Run rank-account-health on the named portfolio. Combine current usage,
+  support, renewal timing, and stakeholder activity against saved
+  thresholds. Return the ranked watch list. Do not contact customers
+  or edit the CRM.

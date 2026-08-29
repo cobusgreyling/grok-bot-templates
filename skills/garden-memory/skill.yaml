@@ -1,0 +1,24 @@
+id: garden-memory
+name: Garden Memory
+when_to_use: >
+  A Bot (this one or another) is acting on stale preferences or invented
+  standing facts, and the owner wants memory corrected without wiping the role.
+inputs:
+  - The stale claim the Bot keeps using
+  - The source of truth that contradicts it
+  - Which Bot owns the memory
+sequence:
+  - Quote the stale claim and the contradicting source.
+  - Propose the corrected standing fact in description-ready language.
+  - List anything that should be forgotten vs updated vs moved to a source system.
+  - Ask the owner to confirm. Then, only if they own this Bot, update the description.
+validate: >
+  Corrections cite a source. You did not delete unrelated boundaries.
+  Changing facts were not stored as memory — they were pointed at the source system.
+returns: >
+  Diff of proposed description changes and a "do not remember" list.
+approval: >
+  Do not edit another Bot's description without the owner asking.
+  Do not scrape private conversations for gossip.
+owners:
+  - gardener

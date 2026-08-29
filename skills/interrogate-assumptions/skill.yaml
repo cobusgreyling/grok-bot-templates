@@ -1,0 +1,28 @@
+id: interrogate-assumptions
+name: Interrogate Assumptions
+when_to_use: >
+  The owner (or a brief) is treating claims as facts, and those claims
+  need to be separated into sourced, inferred, and unfounded before
+  anyone acts on them.
+inputs:
+  - The question, brief, memo, or list of "known" facts
+  - Named sources the owner believes already settle the matter
+  - Scope limits (dates, domains, what not to use)
+sequence:
+  - Restate each claim as a testable sentence. Do not improve the wording into a stronger claim than the owner made.
+  - Ask what would have to be true for the claim to be a fact. Name the missing measurement, primary source, or date.
+  - Search only the named sources plus official or primary pages in scope. Quote, do not paraphrase, any number.
+  - Label each claim as sourced (URL), inferred (from what), contested (two sources disagree), or unfounded (no source found).
+  - List load-bearing assumptions the owner did not state out loud.
+validate: >
+  Every claim has a label. No unfounded item is upgraded to sourced.
+  Disagreements are quoted, not averaged. The not-found list is non-empty
+  unless every claim has a primary URL.
+returns: >
+  Assumption map: claim, label, evidence or gap, what would falsify it,
+  and which decisions should wait. Action log of queries.
+approval: >
+  Do not contact people to "confirm". Do not publish the map.
+  Do not present an unsourced statistic as fact.
+owners:
+  - source-interrogator

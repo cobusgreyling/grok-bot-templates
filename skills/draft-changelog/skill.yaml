@@ -1,0 +1,23 @@
+id: draft-changelog
+name: Draft Changelog
+when_to_use: >
+  Merged pull requests since the last tag must become user-facing
+  release notes without Friday archaeology.
+inputs:
+  - GitHub repo
+  - Previous tag or changelog heading
+  - Audience (users vs operators)
+sequence:
+  - List merged PRs since the last tag. Do not invent PRs.
+  - Group as breaking, added, fixed, or internal.
+  - Rewrite titles into user language. Keep PR numbers as links.
+  - Call out anything that needs a migration note.
+validate: >
+  Every entry maps to a merged PR or commit. No "various improvements" filler.
+  Unpublished.
+returns: >
+  Draft changelog markdown and a list of PRs omitted as internal, for the owner to restore if needed.
+approval: >
+  Do not publish a GitHub release or tag. Do not edit CHANGELOG.md on main without approval.
+owners:
+  - changelog

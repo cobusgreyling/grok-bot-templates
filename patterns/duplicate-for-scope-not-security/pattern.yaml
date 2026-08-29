@@ -1,0 +1,14 @@
+id: duplicate-for-scope-not-security
+name: Duplicate for scope, not security
+summary: >
+  Duplicate a Bot when you want the same role for a different scope —
+  one Account Health per region. The copy gets profile, skills, routines,
+  avatar — not history or memory.
+rule: >
+  Rename and give the new scope before assigning work. Do not duplicate
+  in the hope that credentials will not leak across copies. They share a computer.
+anti_pattern: "I'll copy Finance so it cannot see Gmail."
+source: https://docs.x.ai/grok-bot/bots
+applies_to:
+  - teams
+  - safety

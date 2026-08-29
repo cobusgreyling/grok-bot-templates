@@ -1,0 +1,24 @@
+id: weekly-changelog
+name: Weekly Changelog
+owner: changelog
+cadence: Fridays 14:00 in the Bot timezone
+skill: draft-changelog
+input_source: >
+  GitHub merged pull requests since the last tag or previous changelog
+  heading, for the named repository
+expected_result: >
+  Draft changelog markdown grouped breaking / added / fixed / internal,
+  with PR links, plus a list of PRs omitted as internal. Unpublished.
+  No tag created.
+approval_boundary: >
+  Do not publish a GitHub release. Do not tag the repository. Do not
+  edit CHANGELOG.md on main without approval.
+missing_source: >
+  If GitHub is not connected, or there is no tag and no previous heading,
+  report the failure and stop. Do not invent PRs or fill with "various
+  improvements".
+test_first: true
+prompt: >
+  Run draft-changelog for merged PRs since the last tag. Group breaking,
+  added, fixed, internal. Rewrite titles into user language and keep PR
+  numbers as links. Do not tag or publish.

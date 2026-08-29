@@ -1,0 +1,24 @@
+id: draft-security-answers
+name: Draft Security Answers
+when_to_use: >
+  A vendor security questionnaire needs draft answers drawn from a
+  source-of-truth pack — the form stays unsubmitted.
+inputs:
+  - The questionnaire file or pasted questions
+  - Source-of-truth pack on Google Drive or Notion
+  - Last submitted answers if the owner attached them
+sequence:
+  - Inventory questions and group them by topic.
+  - For each question, find the matching pack section, quote it, and draft an answer.
+  - Mark unanswered where the pack is silent. Do not invent controls.
+  - Flag contradictions between the pack and last submitted answers.
+  - Return a draft workbook. Do not submit the form or email the vendor.
+validate: >
+  Every drafted answer cites a pack section or doc title. Unanswered
+  questions are listed. The form was not submitted.
+returns: >
+  Draft answer table, unanswered list, contradiction list, action log of pack files read.
+approval: >
+  Do not submit the questionnaire. Do not attest. Do not email the vendor the answers.
+owners:
+  - security-questionnaire

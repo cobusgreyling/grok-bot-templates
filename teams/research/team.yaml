@@ -1,0 +1,18 @@
+id: research
+name: Research
+lead: research-desk
+bots:
+  - research-desk
+  - cited-brief
+  - source-interrogator
+why: >
+  Deep briefs, three-minute answers, and assumption hunts are different
+  jobs; mixing them hides the not-found list.
+group_kickoff: >
+  @Research Desk produce the cited brief for the question in this chat.
+  @Cited Brief keep a three-minute version with URLs. @Source Interrogator
+  list assumptions treated as facts. Do not publish. Do not invent
+  citations. Do not contact people for interviews.
+plugins: []
+max_bots: 4
+autonomy: L1

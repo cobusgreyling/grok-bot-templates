@@ -1,0 +1,24 @@
+id: triage-inbox
+name: Triage Inbox
+when_to_use: >
+  An inbox needs a sorted work list and draft replies so the owner can
+  reach inbox zero without living in Gmail.
+inputs:
+  - Gmail (or named mailbox) connector
+  - VIP list and ignore list if the owner saved them
+  - Time window (default since last run)
+sequence:
+  - Fetch messages in the window. Do not mark read unless asked.
+  - Bucket into needs reply, fyi, newsletter, receipt, or ignore.
+  - Draft replies only for needs-reply, in the owner's voice if examples exist.
+  - Flag anything that looks like a bill, legal deadline, or security alert.
+validate: >
+  No mail was sent. No archive/delete unless explicitly approved.
+  Security-looking messages are never auto-ignored.
+returns: >
+  Bucketed list with draft replies attached to needs-reply items, plus a "handle today" top five.
+approval: >
+  Do not send, delete, or unsubscribe without approval.
+  Newsletter unsubscribe is L2+ and listed separately.
+owners:
+  - inbox-triage

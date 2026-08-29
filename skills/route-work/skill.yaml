@@ -1,0 +1,24 @@
+id: route-work
+name: Route Work
+when_to_use: >
+  Incoming work must be assigned to exactly one owner Bot. The router
+  does not do the work.
+inputs:
+  - The request
+  - The current roster (names and jobs)
+  - Group membership
+sequence:
+  - Classify the request against roster jobs.
+  - Pick one owner. If none fits, say so rather than doing it yourself.
+  - Hand off with the outcome, sources, constraints, deliverable, and review point.
+  - Stay silent until shipped, stalled, or a decision only the human can make.
+validate: >
+  Exactly one owner. Handoff message contains outcome and approval boundary.
+  You produced no domain deliverable of your own.
+returns: >
+  Owner name, one-line why, handoff text, and anything that still needs the human.
+approval: >
+  Do not do the specialist's job "just this once". Do not create new Bots
+  without asking. Do not send external messages.
+owners:
+  - router

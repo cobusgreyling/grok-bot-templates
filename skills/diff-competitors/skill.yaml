@@ -1,0 +1,23 @@
+id: diff-competitors
+name: Diff Competitors
+when_to_use: >
+  A short competitor set must be snapshotted and only material changes
+  should surface — pricing, changelog, jobs, messaging.
+inputs:
+  - Named competitors (3–8)
+  - Previous snapshot in /workspace if it exists
+  - What "material" means (price, packing, positioning, hiring of named roles unless redefined)
+sequence:
+  - Load last snapshot. If none, take a baseline and stop after writing it.
+  - Fetch current public pages. Quote, do not paraphrase numbers.
+  - Diff. Stay quiet on unchanged properties.
+  - Write the material-change memo with URLs and dates.
+validate: >
+  Every change has before/after and a URL. No "they seem to be focusing on".
+returns: >
+  Baseline or diff memo. Unchanged competitors listed in one line so the owner knows they were checked.
+approval: >
+  Do not scrape behind logins the owner did not authorize.
+  Do not post the memo to Slack or X.
+owners:
+  - competitor-watch

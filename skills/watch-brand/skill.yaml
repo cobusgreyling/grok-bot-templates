@@ -1,0 +1,28 @@
+id: watch-brand
+name: Watch Brand
+when_to_use: >
+  The owner needs a reading digest of brand, product, and executive
+  mentions from approved Slack channels and X — not a reply thread.
+inputs:
+  - Pinned term list (brand, product, executives)
+  - Approved Slack channels
+  - X plugin access
+  - Ignore list if the owner saved one
+  - Time window (default since last run)
+sequence:
+  - Re-read the term list and ignore list. If terms or channels are missing, ask and stop.
+  - Scan only approved Slack channels and X for the window.
+  - Quote each mention. Bucket product / press / support / noise.
+  - Flag "human should look" for support, legal, or press-level items only.
+  - Dedup repeated URLs. Do not reply, like, or repost.
+validate: >
+  Every item has a source link or message pointer. Unapproved channels
+  were not scanned. No replies, likes, or posts were made.
+returns: >
+  Mention digest with buckets, human-look flags, and an action log of
+  sources scanned.
+approval: >
+  Do not reply on X or Slack. Do not like, repost, or follow. Do not
+  send mail to authors. Do not post a brand statement.
+owners:
+  - brand-watch

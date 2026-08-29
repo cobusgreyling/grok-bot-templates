@@ -1,0 +1,24 @@
+id: weekly-saas-finance
+name: Weekly SaaS Finance
+when_to_use: >
+  The owner needs a weekly memo of collected revenue, renewals in
+  window, and past-due — not refunds and not dunning.
+inputs:
+  - Gmail billing or finance labels
+  - Last week's memo if it exists in /workspace
+  - Named customer list if the owner attached one
+sequence:
+  - Scan mail for payments received, renewal notices, and past-due notices in the week.
+  - Total collected with source pointers. List renewals in window. List past-due with source.
+  - Compare to last week if a memo exists. Do not guess ARR from memory.
+  - Draft an internal memo. Do not send customer-facing dunning.
+  - Write the memo to /workspace/saas-finance.md.
+validate: >
+  Collected total has source pointers. No refund was issued. No dunning
+  mail was sent. Missing weeks are labeled missing, not backfilled.
+returns: >
+  Weekly memo: collected, renewals, past-due, questions, action log.
+approval: >
+  Do not refund. Do not send dunning. Do not change invoices, credits, or tax settings.
+owners:
+  - saas-finance

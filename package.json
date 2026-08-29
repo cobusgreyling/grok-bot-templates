@@ -1,0 +1,70 @@
+{
+  "name": "@cobusgreyling/grokbot",
+  "version": "1.0.0",
+  "description": "The engineering kit for Grok Bot templates — spec, Bot Ready score, teams, skills, routines, and a catalog you can paste into Grok Bot today.",
+  "type": "module",
+  "bin": {
+    "grokbot": "bin/grokbot.mjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "schema",
+    "templates",
+    "teams",
+    "skills",
+    "routines",
+    "patterns",
+    "convert",
+    "START.md",
+    "SPEC.md",
+    "catalog/catalog.json",
+    "assets/header.jpg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "grokbot": "node bin/grokbot.mjs",
+    "render": "node scripts/render.mjs",
+    "catalog": "node scripts/build-catalog.mjs && node scripts/build-start.mjs",
+    "site": "node scripts/build-site.mjs",
+    "lint": "node bin/grokbot.mjs validate",
+    "validate": "node bin/grokbot.mjs validate",
+    "score": "node bin/grokbot.mjs score --all",
+    "doctor": "node bin/grokbot.mjs doctor",
+    "test": "node --test tests/*.test.mjs",
+    "build": "npm run render && npm run catalog && npm run site",
+    "ci": "npm run build && npm run validate && npm test && npm run doctor",
+    "prepublishOnly": "npm run ci"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "grok",
+    "grok-bot",
+    "xai",
+    "templates",
+    "agents",
+    "skills",
+    "routines",
+    "cli"
+  ],
+  "author": "Cobus Greyling",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cobusgreyling/grok-bot-templates.git"
+  },
+  "homepage": "https://cobusgreyling.github.io/grok-bot-templates/",
+  "bugs": {
+    "url": "https://github.com/cobusgreyling/grok-bot-templates/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "yaml": "^2.8.1"
+  }
+}

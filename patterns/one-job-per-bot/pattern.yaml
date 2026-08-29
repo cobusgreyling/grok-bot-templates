@@ -1,0 +1,13 @@
+id: one-job-per-bot
+name: One job per Bot
+summary: >
+  Create a separate Bot when the work has a distinct goal, tools, working
+  style, approval boundary, or schedule. Catch-all helpers produce weak memory.
+rule: >
+  Name a repeatable outcome in one sentence a stranger could score. If you
+  cannot, split the Bot.
+anti_pattern: General Helper. Mega-bots that sales, support, and code in one description.
+source: https://docs.x.ai/grok-bot/bots
+applies_to:
+  - templates
+  - teams

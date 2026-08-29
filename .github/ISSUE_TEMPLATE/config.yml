@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Grok Bot official docs
+    url: https://docs.x.ai/grok-bot/get-started
+    about: Product documentation from xAI — not this catalog.
+  - name: Ask a question
+    url: https://github.com/cobusgreyling/grok-bot-templates/discussions
+    about: Use Discussions for "how do I design a Bot" questions.

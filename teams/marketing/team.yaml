@@ -1,0 +1,20 @@
+id: marketing
+name: Marketing
+lead: competitor-watch
+bots:
+  - competitor-watch
+  - content-remix
+  - newsletter-desk
+why: >
+  Competitor noise, channel variants, and the weekly issue get mixed
+  until someone diffs, remixes, and still does not publish.
+group_kickoff: >
+  @Competitor Watch diff the named set since last snapshot and stay
+  quiet on unchanged pages. @Content Remix turn the accepted brief
+  into DRAFT variants. @Newsletter Desk assemble the next issue unsent.
+  Do not publish. Do not post to Slack or X. Do not send the issue.
+plugins:
+  - Slack
+  - Notion
+max_bots: 4
+autonomy: L1

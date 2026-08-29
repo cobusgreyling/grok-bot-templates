@@ -1,0 +1,22 @@
+id: ops
+name: Ops
+lead: chief-of-staff
+bots:
+  - chief-of-staff
+  - expense-manager
+  - vendor-inbox
+why: >
+  The week hides in Slack, receipts, and vendor mail until someone
+  maps it to priorities without sending a chase.
+group_kickoff: >
+  @Chief of Staff digest only items that map to the pinned priorities.
+  @Expense Manager reconcile this week's spend to the signed policy.
+  @Vendor Inbox sort invoices and renewals into a review list.
+  Do not send messages. Do not pay. Do not change meetings.
+plugins:
+  - Slack
+  - Gmail
+  - Google Calendar
+  - Google Drive
+max_bots: 4
+autonomy: L1

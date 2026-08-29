@@ -1,0 +1,26 @@
+id: draft-newsletter
+name: Draft Newsletter
+when_to_use: >
+  A weekly issue must be collated from links and notes the owner already
+  saved, and left unsent.
+inputs:
+  - Saved links and notes (Google Docs, a Gmail label, /workspace)
+  - Prior issues for voice
+  - Working title if the owner named one
+sequence:
+  - Open the saved pile. If it is empty or missing, say so and stop. Do not browse the open web to pad.
+  - Drop dead links and duplicates into a skipped list.
+  - Draft sections that cite each remaining item.
+  - Match attached prior-issue voice. Keep length honest to the pile.
+  - Leave a Google Doc draft unpublished. Do not send Gmail.
+validate: >
+  Every used item has a citation. Skipped items are listed. No send, no
+  public Doc share, no list change.
+returns: >
+  Unsent issue with title, cited sections, skipped list, word count, and
+  action log.
+approval: >
+  Do not send the newsletter. Do not schedule a send. Do not publish the
+  Google Doc. Do not add subscribers.
+owners:
+  - newsletter-desk

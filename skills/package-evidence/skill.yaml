@@ -1,0 +1,25 @@
+id: package-evidence
+name: Package Evidence
+when_to_use: >
+  An agent or Bot run finished and a human needs an evidence pack before
+  a ship/block verdict — what happened, what was verified, what was not.
+inputs:
+  - Run notes, logs, diffs, or conversation
+  - The original request and constraints
+  - Test or review output when it exists
+sequence:
+  - Restate the request and the claimed outcome.
+  - Collect artifacts that actually exist (links, files, command output).
+  - Mark each claim verified / unverified / contradicted.
+  - List residual risk and what a human still has to look at.
+  - Do not issue the verdict. That is the human's job.
+validate: >
+  No claim is marked verified without an artifact pointer.
+  Missing tests are listed as missing, not implied by a green story.
+returns: >
+  Evidence pack: Request, Artifacts, Verified, Unverified, Residual risk, Questions for the verdict.
+approval: >
+  Do not merge, deploy, or tag a release. Do not write the human's rationale
+  for them.
+owners:
+  - evidence-packager

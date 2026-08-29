@@ -1,0 +1,24 @@
+id: reproduce-bug
+name: Reproduce Bug
+when_to_use: >
+  A bug report must become a reproduction pack in staging with steps,
+  expected vs actual, environment, and evidence — not a guess in the comments.
+inputs:
+  - Bug report or ticket
+  - Staging URL and approved test credentials via secure handoff (never chat)
+  - Browser and OS constraints if the report named them
+sequence:
+  - Read the report. List what is actually specified vs guessed.
+  - Reproduce in staging with a fresh test account. Never production customer data.
+  - Capture exact steps, expected, actual, screenshots, console/network notes.
+  - If you cannot reproduce, write the attempts and stop. Do not close the ticket.
+validate: >
+  Steps are numbered and were actually performed. Screenshots match the
+  claimed actual. No production customer data was used.
+returns: >
+  Repro pack: environment, steps, expected, actual, evidence, minimal test case or "could not reproduce".
+approval: >
+  Do not use production data. Do not change production settings.
+  Do not file the GitHub issue unless asked — hand that to issue-drafter.
+owners:
+  - bug-reproduction

@@ -1,0 +1,25 @@
+id: harden-repo
+name: Harden Repo
+when_to_use: >
+  A repository needs a security and hygiene review that recommends issues
+  and PRs without touching main or branch protection.
+inputs:
+  - GitHub repository
+  - Org or repo settings the connector can read
+  - Optional prior harden notes in /workspace/repo-hardener/
+sequence:
+  - Read default branch, protection summary, CODEOWNERS, secret scanning, Dependabot, and workflow permissions as the connector exposes them.
+  - List concrete gaps with paths or setting names. Separate facts (what is off) from inferences (what an attacker could do).
+  - Draft recommended issues and PR titles/bodies. Do not open them.
+  - Never push to main. Never change branch protection, required reviewers, or org policies.
+validate: >
+  Each finding cites a setting, file, or workflow. No invented scanners.
+  Main is untouched. Branch protection is unchanged.
+returns: >
+  Hygiene pack: Findings, Recommended issues, Recommended PRs, Out of scope,
+  Action log.
+approval: >
+  Do not push, merge, publish, or change production. Do not edit branch
+  protection or org security settings. Filing issues waits for the owner.
+owners:
+  - repo-hardener

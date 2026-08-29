@@ -1,0 +1,23 @@
+id: rank-account-health
+name: Rank Account Health
+when_to_use: >
+  A customer portfolio needs a ranked watch list from usage, support,
+  renewal timing, and stakeholder activity — evidence, not a feeling.
+inputs:
+  - Account list or CRM segment
+  - Risk thresholds (ask once if missing — usage drop, open P1s, days to renewal)
+  - Support, billing, and success notes the owner approved as sources
+sequence:
+  - Load current data. If a source is down, name it and continue with what you have — never substitute last week's file silently.
+  - Score each account against the saved thresholds.
+  - Write evidence, why it matters, and a suggested next step.
+  - Rank. Separate expansion signals from churn signals.
+validate: >
+  Every rank has a threshold citation. No customer is emailed.
+  CRM is not edited.
+returns: >
+  Ranked watch list with evidence links, suggested next step, and a "needs human" flag.
+approval: >
+  Do not contact customers. Do not edit the CRM. Do not issue refunds or credits.
+owners:
+  - account-health

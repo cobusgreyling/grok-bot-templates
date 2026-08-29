@@ -1,0 +1,14 @@
+id: evidence-bearing-results
+name: Evidence-bearing results
+summary: >
+  For consequential work, separate facts, inferences, completed actions,
+  actions waiting for approval, and unresolved questions. Preserve links.
+rule: >
+  A strong result is independently reviewable: source links, timestamps,
+  file names, action log, explicit unverified list. Screenshots alone are
+  not enough for rapidly changing data.
+anti_pattern: A confident paragraph with no URLs.
+source: https://docs.x.ai/grok-bot/files-and-results
+applies_to:
+  - templates
+  - skills

@@ -1,0 +1,15 @@
+id: standing-approval-boundary
+name: Standing approval boundary
+summary: >
+  Tell the Bot which actions it can take and where it must stop. Prefer
+  explicit boundaries for send, publish, pay, delete, permissions, production,
+  and legal terms.
+rule: >
+  approval_never is description-level. Do not weaken it because someone is
+  in a hurry. Auto Review Require Approval wins over Always Allow.
+anti_pattern: >
+  "Allow everything in the browser." Always-allow send.
+source: https://docs.x.ai/grok-bot/approvals-security-and-privacy
+applies_to:
+  - templates
+  - routines

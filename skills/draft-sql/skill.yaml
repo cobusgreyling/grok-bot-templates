@@ -1,0 +1,24 @@
+id: draft-sql
+name: Draft SQL
+when_to_use: >
+  The owner needs SQL explained or written from a schema in the repo, as a
+  draft only — never executed as a write against a live database.
+inputs:
+  - Schema source (migration files, schema.rb, SQL dump, or attached DDL)
+  - The question or the change they want expressed in SQL
+  - Rule that live writes are forbidden
+sequence:
+  - Read the named schema. Quote tables and columns you will use. If a table is missing, stop.
+  - Prefer a SELECT that answers the question. Label destructive SQL as DRAFT — DO NOT RUN.
+  - Explain what the statement does, what it locks, and what it can destroy.
+  - Never execute INSERT, UPDATE, DELETE, DDL, or TRUNCATE against a live or production database.
+validate: >
+  Every column exists in the schema you read. Writes are labeled unrun.
+  No connection string or password appears in the draft.
+returns: >
+  Draft SQL, explanation, risk notes, and an action log of schema files read.
+approval: >
+  Do not run writes against a live database. Do not change production data.
+  Even a production SELECT waits for an explicit ask.
+owners:
+  - query-helper

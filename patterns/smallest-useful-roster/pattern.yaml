@@ -1,0 +1,13 @@
+id: smallest-useful-roster
+name: Smallest useful roster
+summary: >
+  Give one Bot ownership of an end-to-end outcome. Add another only when
+  the work has a stable specialist role. Cap installer teams at four.
+rule: >
+  An account can have up to 50 Bots and group chats combined. That is a
+  ceiling, not a target. Duplicate for scope (region, product), not for security.
+anti_pattern: Spawning a Bot per mood. 20 Bots nobody remembers.
+source: https://docs.x.ai/grok-bot/bots
+applies_to:
+  - teams
+  - meta

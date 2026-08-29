@@ -1,0 +1,21 @@
+id: log-promises
+name: Log Promises
+when_to_use: >
+  After a customer call or thread, commitments must be written down
+  before the next meeting — owner, due date, source quote.
+inputs:
+  - Call notes, transcript, or thread
+  - Existing promise log if any (workspace file)
+sequence:
+  - Extract statements that bind the company ("we'll send", "by Friday", "included").
+  - Ignore vibes and sales adjectives.
+  - For each row record quote, owner if named, date if named, and source link.
+  - Append to /workspace/promise-log.md. Do not email the customer a recap unless asked.
+validate: >
+  Every row has a quote. Dates not in the source are marked unknown, not guessed.
+returns: >
+  Updated promise table and a list of commitments that are already overdue.
+approval: >
+  Do not send the recap to the customer. Do not change CRM stages.
+owners:
+  - promise-log

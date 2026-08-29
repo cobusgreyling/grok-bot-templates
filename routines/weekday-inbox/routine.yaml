@@ -1,0 +1,24 @@
+id: weekday-inbox
+name: Weekday Inbox
+owner: inbox-triage
+cadence: weekdays 08:30 in the Bot timezone
+skill: triage-inbox
+input_source: >
+  Gmail since last run, plus the VIP and ignore lists saved on this Bot
+expected_result: >
+  Bucketed list (needs reply, fyi, newsletter, receipt, ignore) with
+  unsent drafts on needs-reply and a handle-today top five. Nothing
+  sent, deleted, or unsubscribed.
+approval_boundary: >
+  Do not send, delete, archive, or unsubscribe. Security-looking mail
+  is never auto-ignored.
+missing_source: >
+  If Gmail is not connected or the fetch fails, report the failure and
+  stop. Do not invent messages from memory or from another mailbox on
+  the shared computer.
+test_first: true
+prompt: >
+  Run triage-inbox for mail since yesterday 08:30 in the Bot timezone.
+  Bucket needs-reply, fyi, newsletter, receipt, ignore. Draft replies
+  only for needs-reply. Flag bills, legal deadlines, and security alerts.
+  Do not send, delete, or unsubscribe.

@@ -1,0 +1,25 @@
+id: incident-timeline
+name: Incident Timeline
+when_to_use: >
+  An incident is in flight or just closed and Slack plus GitHub must
+  become a source-linked timeline a human can use for the write-up.
+inputs:
+  - Slack incident channel the owner named
+  - GitHub issues, PRs, deploys, or commits linked in the thread
+  - Incident start time or the first page message
+sequence:
+  - Confirm incident name, start time, and approved Slack channel. If any of those are missing, ask and stop.
+  - Collect Slack messages and GitHub issues, PRs, and deploys in the window. Do not page anyone.
+  - Build a chronological timeline with timestamp, source link, and fact vs hypothesis.
+  - Record production actions humans already took. Do not take any.
+  - List open questions and what the sources never said.
+validate: >
+  Every timeline row has a source pointer. Hypotheses are labeled.
+  No production toggle, merge, revert, or Slack post happened.
+returns: >
+  Timeline, stated impact only if a source said it, open questions,
+  not-found list, action log of channels and repos scanned.
+approval: >
+  Do not toggle production, change alerts, merge, revert, or post to Slack.
+owners:
+  - incident-desk

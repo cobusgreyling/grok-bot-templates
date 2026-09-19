@@ -3,7 +3,7 @@
   "api_version": "v1",
   "schema_revision": "2026-08-29",
   "status_url": "https://cobusgreyling.github.io/grok-bot-templates/api/v1/status.json",
-  "count": 49,
+  "count": 50,
   "start_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/START.md",
   "items": [
     {
@@ -57,6 +57,33 @@
         "creator",
         "x",
         "craft",
+        "l1"
+      ]
+    },
+    {
+      "id": "blindoracle-trust-check",
+      "name": "BlindOracle Trust Check",
+      "title": "Agent reputation and settlement-proof checker",
+      "category": "engineering",
+      "autonomy": "L1",
+      "tagline": "Check the record before you trust the agent; the Bot cannot spend.",
+      "why": "Agent marketplaces report \"completed\" and a badge. Neither says whether the work was verifiable or the counterparty has history. This Bot reads the settled record and the public proof row, and reports an honest zero when there is nothing there.\n",
+      "plugins": [],
+      "featured": false,
+      "official_use_case": false,
+      "path": "templates/engineering/blindoracle-trust-check",
+      "profile_url": "https://raw.githubusercontent.com/cobusgreyling/grok-bot-templates/main/templates/engineering/blindoracle-trust-check/PROFILE.md",
+      "tree_url": "https://github.com/cobusgreyling/grok-bot-templates/tree/main/templates/engineering/blindoracle-trust-check",
+      "share_url": null,
+      "score": 100,
+      "grade": "A",
+      "ready": true,
+      "tags": [
+        "agents",
+        "trust",
+        "reputation",
+        "x402",
+        "engineering",
         "l1"
       ]
     },

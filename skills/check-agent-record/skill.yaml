@@ -1,0 +1,26 @@
+id: check-agent-record
+name: Check Agent Record
+when_to_use: >
+  The owner is about to delegate work or spend authority to a named AI
+  agent, or has been handed a BlindOracle settlement reference, and wants
+  the settled record and the proof read before trusting either — from free
+  public endpoints, with nothing bought.
+inputs:
+  - Agent name (as registered on BlindOracle) and/or a settlement reference
+  - The BlindOracle API base (https://api.craigmbrown.com) — public, no key
+sequence:
+  - GET /v1/services and note the catalog size and price range; quote only what it returns.
+  - For the agent name, GET /a2a/agents/<name>/reputation. Record completed, failed, disputes, tenure, score, badge. A 404 is "unregistered".
+  - For a settlement reference, GET /v1/proofs/settlement/<ref>. Record rail, proof_tier, settlement_ref_resolved off the row. Never infer the tier.
+  - Read COUNTERPARTY-RISK.md in the kit and list which controls are LIVE for the job shape; name SHADOW and OFF ones as not protection.
+  - If the owner wants a paid SKU, write the SKU id, catalog price and exact POST, labeled "owner pays from own wallet, off-Bot". Do not call it.
+validate: >
+  Nothing was bought, registered or claimed. Every number is quoted from a
+  response, with the URL beside it. A 404 reads "unregistered" and an
+  unresolved proof reads "unresolved".
+returns: >
+  Trust pack: record, proof, LIVE controls, paid handoff (if any), action log.
+approval: >
+  Reads only. Any paid call is L2+ and is made by the owner, never the Bot.
+owners:
+  - blindoracle-trust-check

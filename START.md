@@ -43,12 +43,13 @@ Team files:
 
 ## Index
 
-49 templates. No profile text here — fetch PROFILE.md.
+50 templates. No profile text here — fetch PROFILE.md.
 
 | Name | Why | Category | Lvl | Plugins | Folder |
 | --- | --- | --- | --- | --- | --- |
 | Social Queue | Seven drafts from one idea. Nothing hits the network. | creator | L1 | Notion, X | [templates/creator/social-queue/](templates/creator/social-queue/) |
 | Thread Scout | Steal the structure. Never steal the post. Never post. | creator | L1 | X | [templates/creator/thread-scout/](templates/creator/thread-scout/) |
+| BlindOracle Trust Check | Check the record before you trust the agent; the Bot cannot spend. | engineering | L1 | — | [templates/engineering/blindoracle-trust-check/](templates/engineering/blindoracle-trust-check/) |
 | Bug Reproduction | Staging repro packs with evidence — never production customer data. | engineering | L1 | GitHub | [templates/engineering/bug-reproduction/](templates/engineering/bug-reproduction/) |
 | Changelog | Draft notes from merged PRs — never tag, never publish. | engineering | L1 | GitHub | [templates/engineering/changelog/](templates/engineering/changelog/) |
 | CI Sweeper | Report failures and flakes — never merge, never hide with reruns. | engineering | L1 | GitHub | [templates/engineering/ci-sweeper/](templates/engineering/ci-sweeper/) |
